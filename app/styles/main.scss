@@ -1,0 +1,213 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/";
+
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "compass";
+
+
+/*** Screen size break downs ***/
+$break-sm: 768px;
+$break-md: 992px;
+$break-lg:1200px;
+
+
+/** Project related variables */
+$projects-per-row-desktop: 3;
+$projects-per-row-tablet: 2;
+$projects-per-row-phones: 1;
+$project-padding: 10px;
+
+
+@mixin respond-to($media){
+    @if $media == xs {
+        @media only screen and (max-width: $break-sm) { @content; }
+    }
+
+   @else if $media == sm {
+        @media only screen and (min-width: $break-sm + 1) and (max-width: $break-md - 1) { @content; }
+    }
+
+    @else if $media == md {
+        @media only screen and (min-width: $break-md + 1) and (max-width: $break-lg - 1) { @content; }
+    }
+
+    @else if $media == lg {
+        @media only screen and (min-width: $break-lg) { @content; }
+    }
+
+}
+
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    font-style: light;
+    font-weight: 300;
+    font-size: 14pt;
+    line-height: 20pt;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+nav {
+
+    margin-left: auto;
+    margin-right:auto;
+    padding: 15px;
+    background-color: white;
+
+    /* Logo image */
+    div.logo{
+        background:url("../images/signature1.png") no-repeat left center;
+        height:50px;
+    }
+}
+
+#app{
+    margin-top: 60px;
+}
+
+ul.navigation-links{
+    li{
+        display: block;
+        float: left;
+        padding:15px;
+    }
+
+   a{
+       &:hover{text-decoration:none;}
+    }
+
+    display: block;
+    float: right;
+    height: 40px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    font-family: 'New Gothic MT', sans-serif;
+}
+
+
+a.section{
+   display: block; 
+   position: relative; 
+   top: -60px; 
+   visibility: hidden;
+}
+
+div#projects{
+}
+
+div.project-list { 
+    width:100%; 
+    margin-top:20px;
+}
+
+/* Project tiles on the main page */
+div.project{
+    padding:0;
+
+    div.project-image{
+        padding-bottom: 100%;
+
+         &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1));
+            opacity: .6; 
+          }
+
+        span{
+            position:absolute;
+            bottom:0;
+            margin:10px;
+            color:white;
+        }
+    }
+}
+
+/*Project content details */
+div.project-content{
+    div.project-banner{
+        @include respond-to(xs) { padding-bottom:40%; }
+        @include respond-to(sm) { padding-bottom:35%;}
+        @include respond-to(md) { padding-bottom:25%;}
+        @include respond-to(lg) { padding-bottom:25%;}
+    }
+
+    span{
+        &.sub-header{ display: block; }
+        font-weight: bold;
+    }
+
+    a{
+        display: inline-block;
+        float:right;
+    }
+}
+
+/* Skill info  on the main page*/
+div#skills{
+    height: 800px;
+    background-color:grey;
+}
+
+
+/* Contact information on the main page*/
+
+div#contacts{
+
+    img.olga-img{
+        width: 200px;
+    }
+
+    a{
+        display: inline-block;
+        width: 71px;
+        height: 71px;
+
+        &.facebook{
+            background:url("../images/facebook_normal.png") no-repeat left center;
+            &:hover{
+                 background:url("../images/facebook_hover.png") no-repeat left center;
+            }
+        }
+
+        &.twitter{
+            background:url("../images/twitter_normal.png") no-repeat left center;
+            &:hover{
+                 background:url("../images/twitter_hover.png") no-repeat left center;
+            }
+        }
+
+         &.linkedin{
+            background:url("../images/linkedin_normal.png") no-repeat left center;
+            &:hover{
+                 background:url("../images/linkedin_hover.png") no-repeat left center;
+            }
+        }
+
+         &.dribbble{
+            background:url("../images/dribbble_normal.png") no-repeat left center;
+            &:hover{
+                 background:url("../images/dribbble_hover.png") no-repeat left center;
+            }
+        }
+
+    }
+
+}
+
+
