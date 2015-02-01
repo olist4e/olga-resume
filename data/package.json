@@ -1,0 +1,14 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "description": "Data server for portfolio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Olga Hollingsworth",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.1"
+  }
+}
