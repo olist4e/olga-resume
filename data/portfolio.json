@@ -1,0 +1,74 @@
+[
+	{
+		"_id" : 1, 
+		"results" : "", 
+		"solution" : "", 
+		"process" : "", 
+		"challenge" : "", 
+		"description" : "", 
+		"employer" : "Enlighten", 
+		"image" : "", 
+		"position" : "User Experience Strategist", 
+		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ]
+	},
+	{
+		"_id" : 2, 
+		"results" : "", 
+		"solution" : "", 
+		"process" : "", 
+		"challenge" : "", 
+		"description" : "", 
+		"employer" : "DeepField Networks", 
+		"image" : "", 
+		"position" : "User Experience Intern", 
+		"contributions" : [ "one", "two" ]
+	},
+	{
+		"_id" : 3, 
+		"results" : "", 
+		"solution" : "", 
+		"process" : "", 
+		"challenge" : "", 
+		"description" : "", 
+		"employer" : "TechSmith", 
+		"image" : "", 
+		"position" : "User Experience Intern", 
+		"contributions" : [ "one", "two" ]
+	},
+	{
+		"_id" : 4, 
+		"results" : "", 
+		"solution" : "", 
+		"process" : "", 
+		"challenge" : "", 
+		"description" : "", 
+		"employer" : "Global Dressage Analytics", 
+		"image" : "", 
+		"position" : "User Experience Designer/Web Developer", 
+		"contributions" : [ "one", "two" ]
+	},
+	{
+		"_id" : 5, 
+		"results" : "", 
+		"solution" : "", 
+		"process" : "", 
+		"challenge" : "", 
+		"description" : "", 
+		"employer" : "U of M, Counseling and Psychological Services", 
+		"image" : "", 
+		"position" : "Student Researcher", 
+		"contributions" : [ "one", "two" ]
+	},
+	{
+		"_id" : 6, 
+		"results" : "", 
+		"solution" : "", 
+		"process" : "", 
+		"challenge" : "", 
+		"description" : "", 
+		"employer" : "CERN", 
+		"image" : "", 
+		"position" : "Junior Software Engineer", 
+		"contributions" : [ "one", "two" ]
+	}
+]
