@@ -6,6 +6,10 @@ var React = window.React = require('react'),
     skillsMount = document.getElementById("skills");
 
 
+//Data route
+var DATA_ROOT = "http://localhost:3000";
+
+
 //Router component to handle browser history
 var Router = require('react-router-component');
 
@@ -17,42 +21,33 @@ var Link = Router.Link;
 
 var DetailedProject = React.createClass({
   getInitialState:function(){ 
-    return { project: {
-    projectId:null,
-    position:"",
-    image:"",
-    employer:null,
-    contributions: [],
-  }} 
-},
-  componentWillMount:function(){
-    // console.log("I have a project ID before mount:", this.props.projectId)
+      return { project: {
+      _id:null,
+      position:"",
+      image:"",
+      employer:null,
+      contributions: [],
+    }} 
   },
   componentDidMount:function(){
-    var dProject = {project: {
-      projectId:null,
-      position:"CERN UPDATED",
-      image:"cern-crop.jpg",
-      employer:"CERN",
-      description:" I developed web-based real-time visualization monitors that included a Java-based charting application,real-time data transfer servers, and an XML configuration framework.",
-      contributions: ["contrib1","contrib2","contrib3"]
-    }}
+    var projectURL = this.props.source + "/" + this.props.projectId;
 
-    // console.log(this.props.projectId);
-
-    this.setState(dProject);
-
+    $.get(projectURL, function(result){
+      // console.log(result);
+      if (this.isMounted()){
+        this.setState({"project": result});
+      }
+    }.bind(this));
   },
   render: function(){
     var createContribs = function(contrib){
       return (<li>{contrib}</li>)
-    }
+    };
 
     var backgroundInline = function(image){
       var URL ="../images/"+image;
-      console.log(URL);
       return {backgroundImage: 'url(' + URL + ')' }
-    }
+    };
 
     console.log(this)
 
@@ -94,8 +89,8 @@ var Project = React.createClass({
 
     var imageClassString = "project-image";
     return (
-        <div className={projectClassString(this.props.project.projectId)} onClick={this.handleClick}>
-          <Link href= {produceLink(this.props.project.projectId)}>
+        <div className={projectClassString(this.props.project._id)} onClick={this.handleClick}>
+          <Link href= {produceLink(this.props.project._id)}>
             <div className={imageClassString}  style={backgroundInline(this.props.project.image)}>
               <span>{this.props.project.position}</span>
             </div>
@@ -116,24 +111,19 @@ var Project = React.createClass({
 var ProjectList = React.createClass({
   getInitialState: function(){
     return { projects: [{
-      projectId:1,
-      position:"CERN",
-      image:"cern1.png"
-    }, {
-      projectId:2,
-      position:"UMSI",
-      image:"umsi.png"
-    }, {
-      projectId:2,
-      position:"UMSI",
-      image:"umsi.png"
-    }, {
-      projectId:2,
-      position:"UMSI",
-      image:"umsi.png"
-    }
+      projectId:null,
+      position:"",
+      image:""
+    }]}
+  },
 
-    ]}
+  componentDidMount: function(){
+    $.get(this.props.source, function(result){
+      // console.log(result);
+      if (this.isMounted()){
+        this.setState({"projects": result});
+      }
+    }.bind(this));
   },
 
   render: function(){
@@ -159,12 +149,15 @@ var App = React.createClass({
   },
 
   render: function() {
+    var dataUrl = DATA_ROOT +"/projects";
+
+
     return (
       <Locations>
-        <Location path="" handler={ ProjectList } />
-        <Location path="/" handler={ ProjectList } />
-        <Location path="/#projects" handler={ ProjectList } />
-        <Location path="/project/:projectId" handler={ DetailedProject } />
+        <Location path="" handler={ ProjectList }  source={dataUrl} />
+        <Location path="/" handler={ ProjectList }  source={dataUrl} />
+        <Location path="/#projects" handler={ ProjectList }  source={dataUrl} />
+        <Location path="/project/:projectId" handler={ DetailedProject } source={dataUrl} />
       </Locations>
     )
   }

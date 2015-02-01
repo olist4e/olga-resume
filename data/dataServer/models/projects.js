@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var ProjectSchema = new mongoose.Schema({
-  projectId:{type:Number, mix:0, max: 100},
+  _id:{type:Number, mix:0, max: 100},
   // _id: mongoose.Schema.Types.ObjectId,
   position:String,
   image:String,
@@ -18,7 +18,7 @@ var Project = mongoose.model('Project', ProjectSchema);
 
 var p = new Project();
 
-p.projectId = 1;
+p._id = 1;
 p.position = "Junior SE";
 p.image = "";
 p.employer = "CERN";
