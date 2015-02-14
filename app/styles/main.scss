@@ -117,6 +117,7 @@ div.project{
 
     div.project-image{
         padding-bottom: 100%;
+        background-image:cover;
 
          &:before {
             content: '';
@@ -142,9 +143,9 @@ div.project{
 div.project-content{
     div.project-banner{
         @include respond-to(xs) { padding-bottom:40%; }
-        @include respond-to(sm) { padding-bottom:35%;}
-        @include respond-to(md) { padding-bottom:25%;}
-        @include respond-to(lg) { padding-bottom:25%;}
+        @include respond-to(sm) { padding-bottom:35%; }
+        @include respond-to(md) { padding-bottom:25%; }
+        @include respond-to(lg) { padding-bottom:25%; }
     }
 
     span{
@@ -162,6 +163,58 @@ div.project-content{
 div#skills{
     height: 800px;
     background-color:grey;
+
+    /* Chart Experiment */
+    background-color: #fff;
+    width: 960px;
+    height: 700px;
+    margin-top: 10px;
+
+    #main {
+      float: left;
+      width: 750px;
+    }
+
+    #sidebar {
+      float: right;
+      width: 100px;
+    }
+
+    #sequence {
+      width: 600px;
+      height: 70px;
+    }
+
+    #legend {
+      padding: 10px 0 0 3px;
+    }
+
+    #sequence text, #legend text {
+      font-weight: 600;
+      fill: #fff;
+    }
+
+    #chart {
+      position: relative;
+    }
+
+    #chart path {
+      stroke: #fff;
+    }
+
+    #explanation {
+      position: absolute;
+      top: 260px;
+      left: 305px;
+      width: 140px;
+      text-align: center;
+      color: #666;
+      z-index: -1;
+    }
+
+    #percentage {
+      font-size: 2.5em;
+    }
 }
 
 

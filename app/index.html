@@ -14,6 +14,7 @@
         
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/d3/d3.js"></script>
         <!-- endbuild -->
         
     </head>
@@ -40,12 +41,29 @@
                 <a id="skill" class="section"></a>
                 <div id="skills" class="row">
                     <h1>My Skillz </h1>
+
+                    <div id="sunburst">
+                        <div id="sequence"></div>
+                        <div id="chart">
+                            <div id="explanation" style="visibility: hidden;">
+                                <span id="percentage"></span><br/>
+                                years
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sidebar">
+                        <input type="checkbox" id="togglelegend"> Legend<br/>
+                        <div id="legend" style="visibility: hidden;"></div>
+                    </div>
+
                 </div>
+
+
                  <a id="contact" class="section"></a>
                 <div id="contacts" class="row">
                     <h1>Hi there...</h1>
                     <div class="personal-info col-md-8 col-sm-6 col-xs-12">
-                        <img src="../images/alps.jpg" alt="photos of Olga" class="olga-img img-circle">
+                        <!--<img src="../images/alps.jpg" alt="photos of Olga" class="olga-img img-circle">-->
                         <p>
                         Hi.I am a User Experience Architect, Interaction Designer, and Web Developer. I am interested in digital design and social interactions.
                         </p>
