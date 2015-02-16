@@ -162,27 +162,15 @@ div.project-content{
 /* Skill info  on the main page*/
 div#skills{
     height: 800px;
-    background-color:grey;
-
-    /* Chart Experiment */
-    background-color: #fff;
-    width: 960px;
-    height: 700px;
+    background-color:#E8E8E8;
     margin-top: 10px;
 
-    #main {
-      float: left;
-      width: 750px;
-    }
-
-    #sidebar {
-      float: right;
-      width: 100px;
+    .sunburst {
+     position:relative;
     }
 
     #sequence {
-      width: 600px;
-      height: 70px;
+      font-size: small;
     }
 
     #legend {
@@ -190,30 +178,21 @@ div#skills{
     }
 
     #sequence text, #legend text {
-      font-weight: 600;
       fill: #fff;
-    }
 
-    #chart {
-      position: relative;
-    }
-
-    #chart path {
-      stroke: #fff;
+      &.legend-title{ fill: #666666;}
     }
 
     #explanation {
-      position: absolute;
-      top: 260px;
-      left: 305px;
-      width: 140px;
-      text-align: center;
-      color: #666;
-      z-index: -1;
-    }
+        position: absolute;
+        width: 120px;
+        text-align: center;
+        @include respond-to(xs) {  top: 42%; left: 40%;}
+        @include respond-to(sm) {  top: 42%; left: 42%; }
+        @include respond-to(md) {  top: 42%; left: 44%; }
+        @include respond-to(lg) {  top: 44%; left: 45%; }
 
-    #percentage {
-      font-size: 2.5em;
+        #percentage {font-size:large; font-weight:bold;}
     }
 }
 

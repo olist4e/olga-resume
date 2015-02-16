@@ -22,7 +22,7 @@ var Locations = Router.Locations;
 var Location = Router.Location;
 var Link = Router.Link;
 
-//React.render(<SunChart />, document.getElementById("sunburst"));
+React.render(<SunChart />, document.getElementById("sunburst"));
 
 
 var Foo = React.createClass({
