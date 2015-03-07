@@ -18,7 +18,7 @@ Install docker-compose (see http://docs.docker.com/compose/)
 You only need to do this when you change the dependencies
 
 ```
-docker build -f Dockerfile.base -t olga-resume-base .
+./init.sh
 ```
 
 ## Build the data and app images

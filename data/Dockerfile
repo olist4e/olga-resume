@@ -1,4 +1,4 @@
-FROM nodesource/trusty:0.10.36
+FROM nodesource/trusty:0.12.0
 
 # Install Node.js and npm
 #RUN apt-get update && apt-get install -y curl build-essential && curl -sL https://deb.nodesource.com/setup | sudo bash - && apt-get install -y nodejs

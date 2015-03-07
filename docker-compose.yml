@@ -1,7 +1,7 @@
 data:
   build: ./data
   ports:
-    - 8080
+    - 3000:3000
 
 web:
   build: .
