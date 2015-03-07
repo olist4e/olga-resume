@@ -15,6 +15,14 @@ var SunChart = React.createClass({
     };
   },
   componentDidMount: function() {
+
+  	 $.get(this.props.source, function(result){
+      // console.log(result);
+      if (this.isMounted()){
+        this.setState({data: result});
+      }
+    }.bind(this));
+
    	$(window).on('resize', this.updateContainerSize);
      var el = this.getDOMNode();
      d3Chart.create(el, {
@@ -24,7 +32,7 @@ var SunChart = React.createClass({
    },
 
    componentDidUpdate: function() {
-     var el = this.getDOMNode();
+    var el = this.getDOMNode();
     d3Chart.update(el, {
        width: el.clientWidth,
        height: '400'
@@ -32,8 +40,11 @@ var SunChart = React.createClass({
    },
 
    getChartState: function() {
+   	// console.log(this.props)
+    //  	console.log(this.state)
      return {
-       data: this.props.data
+
+       data: this.state.data
      };
    },
 
@@ -45,10 +56,10 @@ var SunChart = React.createClass({
 
    updateContainerSize:function() {
     var size = $("#skills").width();
-    console.log(this.state)
-    console.log(size)
+    // console.log(this.state)
+    // console.log(size)
     if (this.state.containerSize != size){
-	    console.log("UPDATE called")
+	    // console.log("UPDATE called")
 	   	this.setState({containerSize: size})
     }
    	
@@ -60,13 +71,17 @@ var SunChart = React.createClass({
 
    render: function() {
    	var expStyle = {visibility: 'hidden'}
-   	var size = $("#skills").width();
+   	//Subtract 20 pixels from parent container to make sure that we don't run off the screen
+   	var size = $("#skills").width() - 20;
      return (
        <div className="sunburst" data={this.state.data}  containerSize={size} >
-          <div id="explanation" style={expStyle}>
-            <span id="percentage"></span>%<br/>
-            of my time spent doing <span id="skillz"></span>
-        </div>
+       		<div>
+       			<div id="initial-text">Hover to see more skills</div>
+		        <div id="explanation" style={expStyle}>
+			        <span id="percentage"></span> years<br/>
+		            doing <span id="skillz"></span>
+		            </div>
+	        </div>
        </div>
      );
    }

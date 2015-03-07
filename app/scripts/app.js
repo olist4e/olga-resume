@@ -22,14 +22,9 @@ var Locations = Router.Locations;
 var Location = Router.Location;
 var Link = Router.Link;
 
-React.render(<SunChart />, document.getElementById("sunburst"));
 
-
-var Foo = React.createClass({
-  render: function() {
-    return <div>Hai</div>;
-  }
-});
+var dataSkills = DATA_ROOT + "/skills";
+React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 
 var App = React.createClass({
   nagivateTo:function(href){
@@ -40,10 +35,11 @@ var App = React.createClass({
     var dataUrl = DATA_ROOT +"/projects";
 
     return (
-      <Locations>
-        <Location path="/" handler={ ProjectList }  source={dataUrl} />
-        <Location path="/#projects" handler={ ProjectList }  source={dataUrl} />
+      <Locations hash>
         <Location path="/project/:projectId" handler={ DetailedProject } source={dataUrl} />
+        <Location path="/" handler={ ProjectList }  source={dataUrl} />
+        <Location path="/projects" handler={ ProjectList }  source={dataUrl} />
+       
       </Locations>
     )
   }

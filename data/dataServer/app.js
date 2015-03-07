@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var serveStatic = require('serve-static');
+var contentDisposition = require('content-disposition')
+
 var routes = require('./routes/index');
 
 var mongoose = require('mongoose');
@@ -45,6 +48,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//This is so that I can download a file
+app.use(serveStatic('public/static', {'index': false, 'setHeaders': setHeaders }))
+
+// Set header to force download 
+function setHeaders(res, path) {
+  res.setHeader('Content-Disposition', contentDisposition(path))
+}
 
 app.use('/', routes);
 app.use('/projects', projects);

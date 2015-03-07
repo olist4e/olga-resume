@@ -13,30 +13,27 @@ var Project = React.createClass({
 
     var backgroundInline = function(image){
       var URL ="../images/"+image;
-      return { background: 'url(' + URL + ') no-repeat center center fixed'  }
+      return { background: 'url(' + URL + ') no-repeat center center'  }
     }
 
     var produceLink = function(id){ return "/project/" + id }
 
     var imageClassString = "project-image";
 
+    // console.log(this.props)
+
     return (
-        <div className={projectClassString(this.props.project._id)} onClick={this.handleClick}>
+        <div className={projectClassString(this.props.project._id)} >
           <Link href= {produceLink(this.props.project._id)}>
             <div className={imageClassString}  style={backgroundInline(this.props.project.image)}>
-              <span>{this.props.project.position}</span>
+              <span className="position">{this.props.project.position}</span>
+              <span className="employer">{this.props.project.employer}</span>
             </div>
             </Link>
         </div>
       )
   },
-  handleClick:function(){
-    // console.log("Fired project click.")
-    // console.log(App)
-    // componentHandler.openDetailedProject(this.props.project.projectId);
-    //App.nagivateTo("/project/1")
-   
-  }
+
 });
 
 module.exports = Project;

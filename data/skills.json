@@ -1,0 +1,36 @@
+[
+
+["dev","5"],
+["ux", "4"],
+["agile","4"],
+
+["dev-javascript","4"],
+["dev-javascript-d3","3"],
+["dev-javascript-jquery","4"],
+["dev-javascript-react","0.5"],
+["dev-javascript-bootstrap","3"],
+
+
+["dev-html","5"],
+
+["dev-css","5"],
+
+["dev-python","4"],
+
+
+
+["ux-design","4"],
+["ux-design-axure","2"],
+["ux-design-photoshop","2"],
+["ux-design-illustrator","2"],
+["ux-design-prototyping","4"],
+["ux-design-story boarding","2"],
+
+["ux-research","2"],
+["ux-research-usability testing","2"],
+["ux-research-contextual inquiry","2"],
+["ux-research-scenarios","2"],
+["ux-research-personas","2"],
+["ux-research-heuristic evaluation","2"]
+
+]

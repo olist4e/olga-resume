@@ -5,6 +5,8 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/";
 
 
 /*** Screen size break downs ***/
+$break-xxs:400px;
+$break-xs: 500px;
 $break-sm: 768px;
 $break-md: 992px;
 $break-lg:1200px;
@@ -18,8 +20,17 @@ $project-padding: 10px;
 
 
 @mixin respond-to($media){
+
     @if $media == xs {
-        @media only screen and (max-width: $break-sm) { @content; }
+        @media only screen and (min-width: $break-xs + 1) and (max-width: $break-sm) { @content; }
+    }
+
+    @else if $media == xxs {
+        @media only screen and (max-width: $break-xs) and (min-width: $break-xxs + 1) { @content; }
+    }
+
+    @else if $media == xxxs {
+        @media only screen and (max-width: $break-xxs) { @content; }
     }
 
    @else if $media == sm {
@@ -40,7 +51,6 @@ $project-padding: 10px;
 /* Space out content a bit */
 body {
     padding-top: 20px;
-    padding-bottom: 20px;
     color: #666666;
     font-family: 'Roboto', sans-serif;
     font-style: light;
@@ -49,7 +59,6 @@ body {
     line-height: 20pt;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .footer {
     padding-left: 15px;
@@ -66,29 +75,67 @@ nav {
 
     /* Logo image */
     div.logo{
-        background:url("../images/logo-full.png") no-repeat left center;
-        height:50px;
+        @include respond-to(xxxs) { background:url("../images/Logo-smaller.png") no-repeat left center; }
+        @include respond-to(xxs) { background:url("../images/Logo-smaller.png") no-repeat left center; height:50px; }
+        @include respond-to(xs) { background:url("../images/Logo.png") no-repeat left center; }
+        @include respond-to(sm) { background:url("../images/Logo.png") no-repeat left center; }
+        @include respond-to(md) { background:url("../images/Logo.png") no-repeat left center; }
+        @include respond-to(lg) { background:url("../images/Logo.png") no-repeat left center; }
+        height:70px;
+    }
+
+    div.nav-container{
+        padding:0;
     }
 }
 
 #app{
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 ul.navigation-links{
     li{
         display: block;
         float: left;
-        padding:15px;
+        @include respond-to(xxxs) { padding:5px; }
+        @include respond-to(xxs) { padding:5px; }
+        @include respond-to(xs) { padding:10px; }
+        @include respond-to(sm) { padding:15px; }
+        @include respond-to(md) { padding:15px; }
+        @include respond-to(lg) { padding:15px; }
+       
     }
 
    a{
        &:hover{text-decoration:none;}
     }
 
-    display: block;
-    float: right;
+    @include respond-to(xxxs) {  
+        display: block;
+        float: left; 
+        padding-left:5px;}
+
+    @include respond-to(xxs) {  
+        display: block;
+        float: left; 
+        padding-left:5px;}
+
+    @include respond-to(xs) {  
+        display: block;
+        float: left; 
+        padding-left:5px;}
+    @include respond-to(sm) { 
+        display: block;
+        float: right; }
+    @include respond-to(md) { 
+        display: block;
+        float: right; }
+    @include respond-to(lg) { 
+        display: block;
+        float: right; }
+
     height: 40px;
+    padding-top:10px;
     list-style-image: none;
     list-style-position: outside;
     list-style-type: none;
@@ -99,7 +146,7 @@ ul.navigation-links{
 a.section{
    display: block; 
    position: relative; 
-   top: -60px; 
+   top: -80px; 
    visibility: hidden;
 }
 
@@ -127,33 +174,76 @@ div.project{
             bottom: 0;
             left: 0;
             background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1));
-            opacity: .6; 
+            opacity: .8; 
           }
 
-        span{
+        span.position{
+            position:absolute;
+            bottom:24px;
+            margin:10px;
+            color:white;
+            @include respond-to(xxxs) {  font-size: 10pt; }
+            @include respond-to(xxs) {  font-size: 10pt; }
+            @include respond-to(xs) {  font-size: 12pt; }
+            @include respond-to(sm) { font-size: 12pt; }
+            @include respond-to(md) { font-size: 12pt;; }
+            @include respond-to(lg) { font-size: 12pt; }
+        }
+
+        span.employer{
+            @include respond-to(xxxs) {  font-size: 10pt; }
+            @include respond-to(xxs) {  font-size: 12pt; }
+            @include respond-to(xs) {  font-size: 14pt;  }
+            @include respond-to(sm) {  font-size: 14pt; }
+            @include respond-to(md) {  font-size: 14pt; }
+            @include respond-to(lg) {  font-size: 14pt; }
             position:absolute;
             bottom:0;
             margin:10px;
             color:white;
         }
     }
+
+    &:hover{
+        div.project-image {
+            &:before { background-image: none; }
+
+            span { display: none; }
+        }
+    }
 }
 
 /*Project content details */
 div.project-content{
+    margin-top:14px;
+
     div.project-banner{
+        @include respond-to(xxxs) { padding-bottom:40%; }
+        @include respond-to(xxs) { padding-bottom:40%; }
         @include respond-to(xs) { padding-bottom:40%; }
         @include respond-to(sm) { padding-bottom:35%; }
         @include respond-to(md) { padding-bottom:25%; }
         @include respond-to(lg) { padding-bottom:25%; }
+        padding-top:70px;
     }
 
     span{
-        &.sub-header{ display: block; }
-        font-weight: bold;
+        &.sub-header { 
+            display: block;
+            font-weight: bold; 
+        }
+
+        margin-top: 15px;
     }
 
-    a{
+    a.project-header { 
+        font-size: 18pt; 
+        display: inline-block;
+        float: left;
+        &:hover{ text-decoration:none; }
+    }
+
+    a {
         display: inline-block;
         float:right;
     }
@@ -161,36 +251,70 @@ div.project-content{
 
 /* Skill info  on the main page*/
 div#skills{
+    @include respond-to(xxxs) {  height: 730px; }
+    @include respond-to(xxs) {  height: 730px; }
+    @include respond-to(xs) {  height: 730px; }
+    @include respond-to(sm) {  height: 665px; }
+    @include respond-to(md) {  height: 665px; }
+    @include respond-to(lg) {  height: 665px; }
     height: 800px;
     background-color:#E8E8E8;
     margin-top: 10px;
+    padding-left:10px;
+    position:relative;
+
+    div#download-resume{
+        position:absolute;
+        @include respond-to(xxxs) {  top:64px; left:10px; }
+        @include respond-to(xxs) {  top:64px; left:10px; }
+        @include respond-to(xs) {  top:32px; right:10px; }
+        @include respond-to(sm) {  top:32px; right:10px; }
+        @include respond-to(md) {  top:32px; right:10px; }
+        @include respond-to(lg) {  top:32px; right:10px; }
+        
+
+    }
 
     .sunburst {
      position:relative;
+     // @include respond-to(xs) { padding-bottom:40%; }
+     // @include respond-to(sm) { padding-bottom:35%; }
+     // @include respond-to(md) { padding-bottom:25%; }
+     // @include respond-to(lg) { padding-bottom:25%; }
     }
 
     #sequence {
       font-size: small;
     }
 
-    #legend {
-      padding: 10px 0 0 3px;
+    #legend, #sequence {
+      @include respond-to(xxxs) {  padding: 20px 0 0 3px }
+      @include respond-to(xxs) {   padding: 20px 0 0 3px; }
+      padding: 14px 0 0 3px;
+      height: 70px;
+    }
+
+    #sequence{
+        padding-top:40px;
+        margin-bottom: 5px;
     }
 
     #sequence text, #legend text {
-      fill: #fff;
+        fill: #fff;
 
       &.legend-title{ fill: #666666;}
     }
 
-    #explanation {
+    #explanation, #initial-text {
         position: absolute;
-        width: 120px;
+        width: 140px;
         text-align: center;
-        @include respond-to(xs) {  top: 42%; left: 40%;}
-        @include respond-to(sm) {  top: 42%; left: 42%; }
-        @include respond-to(md) {  top: 42%; left: 44%; }
-        @include respond-to(lg) {  top: 44%; left: 45%; }
+        @include respond-to(xxxs) { top:55%; left: 35%; }
+        @include respond-to(xxs) { top:55%; left: 38%; }
+        @include respond-to(xs) {  top: 55%; left: 40%; }
+        @include respond-to(sm) {  top: 50%; left: 42%; }
+        @include respond-to(md) {  top: 50%; left: 44%; }
+        @include respond-to(lg) {  top: 50%; left: 45%; }
 
         #percentage {font-size:large; font-weight:bold;}
     }
@@ -200,6 +324,7 @@ div#skills{
 /* Contact information on the main page*/
 
 div#contacts{
+    padding-left: 10px;
 
     img.olga-img{
         width: 200px;
@@ -240,6 +365,12 @@ div#contacts{
 
     }
 
+}
+
+div.footer{
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 20px;
 }
 
 

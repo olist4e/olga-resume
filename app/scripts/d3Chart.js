@@ -1,16 +1,41 @@
 var d3Chart = {};
 
 var colors = {
-  "dev": "#5687d1",
-  "d3": "#7b615c",
-  "ux": "#de783b",
-  "wires": "#6ab975",
-  "research": "#a173d1",
-  "usability test": "#bbbbbb"
+  "dev": "#0000A0", //Navi blue
+  "javascript": "#3600A1",
+  "jquery": "#400AAB",
+  "react":"#5E28C9",
+  "bootstrap":"#723CDD",
+  "d3": "#8650F1",
+
+  "html":"#8600A1",
+  "css":"#A10086",
+  "python":"#1B00A1",
+
+
+  "ux": "#800517", //Firebrick
+  
+  "design": "#A82D3F",
+  "axure" : "#F87D8F",
+  "photoshop" : "#E4697B",
+  "illustrator" : "#DA5F71",
+  "prototyping" : "#BC4153",
+  "story boarding" : "#EE7385",
+
+  "research": "#6C0003",
+  "usability testing": "#260000",
+  "contextual inquiry" : "#3A0000",
+  "scenarios" : "#4E0000",
+  "personas" : "#620000",
+  "heuristic evaluation" : "#1C0000",
+
+  "agile":"#801C05"
+  
 };
 var lColors = {
-  "dev": "#5687d1",
-  "ux": "#de783b",
+  "dev": "#0000A0",
+  "ux": "#800517",
+  "agile":"#801C05"
 }
 
 var b = {
@@ -33,24 +58,24 @@ function buildHierarchy(csv) {
       var childNode;
       if (j + 1 < parts.length) {
    // Not yet at the end of the sequence; move down the tree.
-  var foundChild = false;
-  for (var k = 0; k < children.length; k++) {
-    if (children[k]["name"] == nodeName) {
-      childNode = children[k];
-      foundChild = true;
-      break;
-    }
-  }
-  // If we don't already have a child node for this branch, create it.
-  if (!foundChild) {
-    childNode = {"name": nodeName, "children": []};
-    children.push(childNode);
-  }
-  currentNode = childNode;
+          var foundChild = false;
+          for (var k = 0; k < children.length; k++) {
+          if (children[k]["name"] == nodeName) {
+            childNode = children[k];
+            foundChild = true;
+            break;
+          }
+          }
+          // If we don't already have a child node for this branch, create it.
+          if (!foundChild) {
+          childNode = {"name": nodeName, "children": []};
+          children.push(childNode);
+          }
+          currentNode = childNode;
       } else {
-  // Reached the end of the sequence; create a leaf node.
-  childNode = {"name": nodeName, "size": size};
-  children.push(childNode);
+          // Reached the end of the sequence; create a leaf node.
+          childNode = {"name": nodeName, "size": size, children:[]};
+          children.push(childNode);
       }
     }
   }
@@ -95,16 +120,8 @@ d3Chart._update = function(el, props, state){
       .innerRadius(function(d) { return Math.sqrt(d.y); })
       .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
 
-
-  var csv = [
-  ["dev-d3", "2"],
-  ["dev-javascript-jquery","4"],
-  ["dev-hmtl","5"],
-  ["ux-wires", "2"],
-  ["ux-research-usability test", "2"]
-  ]
-  var json = buildHierarchy(csv);
-  // console.log(json)
+  var json = buildHierarchy(state.data);
+  
   // Basic setup of page elements.
   this._initializeBreadcrumbTrail();
   this._drawLegend();
@@ -122,7 +139,6 @@ d3Chart._initializeBreadcrumbTrail = function() {
 d3Chart._drawLegend = function() {
   //Getting the width of the legend container
   // var lw = d3.select("#legend")[0][0].clientWidth;
-
     // Dimensions of legend item: width, height, hight of the label, spacing, radius of rounded rect.
     var li = {
       w: 60, h: 60, hl:30, s: 3, r: 0
@@ -185,7 +201,7 @@ d3Chart._breadcrumbPoints = function(d, i) {
   return points.join(" ");
 }
 
-d3Chart._updateBreadcrumbs = function (nodeArray, percentageString) {
+d3Chart._updateBreadcrumbs = function (nodeArray) {
   var THIS = this;
   // Data join; key function combines name and depth (= position in sequence).
   var g = d3.select("#trail")
@@ -251,15 +267,17 @@ d3Chart._draw = function(partition, radius, arc, json) {
 
   // Fade all but the current sequence, and show it in the breadcrumb trail.
   function mouseover(d) {
-    var percentage = (100 * d.value / totalSize).toPrecision(3);
-    // console.log(d.name)
-    var percentageString = percentage;
-    if (percentage < 0.1) {
-      percentageString = "< 0.1%";
-    }
+    // var percentage = (100 * d.value / totalSize).toPrecision(3);
+    // console.log(d)
+    // var percentageString = percentage;
+    // if (percentage < 0.1) {
+    //   percentageString = "< 0.1%";
+    // }
+
+    d3.select("#initial-text").style("visibility","hidden");
 
     d3.select("#percentage")
-        .text(percentageString);
+        .text(d.size);
 
     d3.select("#skillz").text(d.name);
 
@@ -271,7 +289,7 @@ d3Chart._draw = function(partition, radius, arc, json) {
         .style("visibility", "");
 
     var sequenceArray = THIS._getAncestors(d);
-    THIS._updateBreadcrumbs(sequenceArray, percentageString);
+    THIS._updateBreadcrumbs(sequenceArray);
 
     // Fade all the segments.
     d3.selectAll("path")
@@ -308,6 +326,7 @@ d3Chart._draw = function(partition, radius, arc, json) {
         .style("visibility", "hidden");
 
     d3.select("#skillz").style("visibility", "hidden");
+    d3.select("#initial-text").style("visibility","");
   }
 
   // Given a node in a partition layout, return an array of all of its ancestor
