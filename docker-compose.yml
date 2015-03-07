@@ -1,0 +1,11 @@
+data:
+  build: ./data
+  ports:
+    - 8080
+
+web:
+  build: .
+  links:
+    - data
+  ports:
+    - 80:80
