@@ -14,6 +14,15 @@ Run static server
 Install docker (see https://docs.docker.com/installation/)
 Install docker-compose (see http://docs.docker.com/compose/)
 
+## Build the base image
+You only need to do this when you change the dependencies
+
+```
+docker build -f Dockerfile.base -t olga-resume-base .
+```
+
+## Build the data and app images
+
 Run docker-compose up -d from this directory
 
 To restart, docker-compose restart
