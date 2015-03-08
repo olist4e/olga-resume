@@ -10,8 +10,6 @@ var contentDisposition = require('content-disposition')
 
 var routes = require('./routes/index');
 
-var projects = require('./routes/projects');
-
 var app = express();
 
 // view engine setup
@@ -56,7 +54,6 @@ function setHeaders(res, path) {
 }
 
 app.use('/', routes);
-app.use('/projects', projects);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
