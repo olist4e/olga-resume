@@ -12,11 +12,11 @@ RUN \
   chown -R www-data:www-data /var/lib/nginx
 
 # Install dependencies
+RUN apt-get update && apt-get install -y ruby ruby-dev && gem install sass compass
 RUN mkdir -p /opt/nodedeps
 ADD package.json /opt/nodedeps/package.json
 RUN npm install -g gulp
 RUN cd /opt/nodedeps && unset NODE_ENV && npm install --loglevel info
-RUN apt-get update && apt-get install -y ruby ruby-dev && gem install sass compass
 #RUN cd /opt/nodedeps && npm install --dev --loglevel verbose
 
 CMD ["nginx"]
