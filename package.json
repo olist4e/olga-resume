@@ -15,7 +15,7 @@
     "gulp": "~3.8.11",
     "gulp-autoprefixer": "~1.0.1",
     "gulp-bower": "0.0.10",
-    "gulp-cache": "~0.2.8",
+    "gulp-cache": "0.2.8",
     "gulp-imagemin": "~2.2.1",
     "gulp-jade": "~1.0.0",
     "gulp-jest": "~0.2.2",
@@ -45,7 +45,7 @@
     ]
   },
   "browser": {
-    "jquery": "./app/bower_components/jquery/dist/jquery.js"
+    "jquery": "./ui/bower_components/jquery/dist/jquery.js"
   },
   "browserify-shim": {
     "jquery": "$"
