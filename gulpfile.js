@@ -89,7 +89,6 @@ gulp.task('clean', function (cb) {
 gulp.task('bundle', ['styles', 'scripts', 'bower'], function(){
     return gulp.src('./ui/*.html')
                .pipe($.useref.assets())
-//               .pipe($.useref.restore())
                .pipe($.useref())
                .pipe(gulp.dest('dist'));
 });
@@ -109,6 +108,10 @@ gulp.task('serve', function () {
         }));
 });
 
+gulp.task('bower-install', function() {
+    $.bower();
+});
+
 // Bower helper
 gulp.task('bower', function() {
     gulp.src('ui/bower_components/**/*.js', {base: 'ui/bower_components'})
@@ -123,7 +126,7 @@ gulp.task('json', function() {
 
 
 // Watch
-gulp.task('watch', ['html', 'bundle', 'serve'], function () {
+gulp.task('watch', ['bower-install', 'html', 'bundle', 'serve'], function () {
 
     // Watch .json files
     gulp.watch('ui/scripts/**/*.json', ['json']);

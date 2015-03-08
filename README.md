@@ -3,8 +3,8 @@ Install nodejs and npm
 
 ```
 gem install sass compass
-bower install
 npm install
+gulp bower-install
 ```
 
 Run data server

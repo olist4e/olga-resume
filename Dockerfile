@@ -4,14 +4,15 @@ FROM olga-resume-base
 ADD . /opt/local/resume
 
 # Move installed packages to appropriate place
-RUN ln -s /opt/nodedeps/node_modules /opt/local/resume
+RUN rm -rf /opt/local/resume/node_modules && ln -s /opt/nodedeps/node_modules /opt/local/resume
 
 # Build app
 WORKDIR /opt/local/resume
-RUN cd /opt/local/resume && gulp build
+RUN cd /opt/local/resume && gulp bower-install && gulp build
 
 # Add configuration
 # RUN rm -rf /etc/nginx/sites-enabled/default
 # ADD conf/olga-resume.conf /etc/nginx/sites-enabled/olga-resume.conf
 
-CMD ["/opt/local/resume/data/dataServer/bin/www"]
+EXPOSE 3000
+CMD ["/opt/local/resume/bin/www"]
