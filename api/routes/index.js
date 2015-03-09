@@ -11,7 +11,7 @@ var skills = require('../skills.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Express', development: process.env.NODE_ENV != 'production' });
 });
 
 router.get('/skills', function(req,res, next){

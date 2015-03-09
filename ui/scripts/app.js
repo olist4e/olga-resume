@@ -13,7 +13,7 @@ var ProjectList = require('./ProjectList');
 //var d3Chart = require('./d3Chart');
 
 //Data route
-var DATA_ROOT = "http://localhost:3000";
+var DATA_ROOT = "";
 
 //Router component to handle browser history
 var Router = require('react-router-component');
