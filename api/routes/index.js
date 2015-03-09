@@ -16,11 +16,11 @@ router.get('/', function(req, res, next) {
 
 router.get('/skills', function(req,res, next){
     res.json(skills);
-})
+});
 
 router.get('/projects', function(req,res, next){
     res.json(projects);
-})
+});
 
 router.get('/projects/:id', function(req, res, next){
     for (var i=0; i < projects.length; i++){
@@ -32,7 +32,7 @@ router.get('/projects/:id', function(req, res, next){
 
     res.json([]);
 
-})
+});
 
 
 module.exports = router;
