@@ -14,14 +14,13 @@ var $ = require('gulp-load-plugins')();
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 
-
 // Styles
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.scss')
+    return gulp.src('ui/styles/main.scss')
         .pipe($.rubySass({
             style: 'expanded',
             precision: 10,
-            loadPath: ['app/bower_components'],
+            loadPath: ['ui/bower_components'],
             compass:true
         }))
         .pipe($.autoprefixer('last 1 version'))
@@ -29,19 +28,9 @@ gulp.task('styles', function () {
         .pipe($.size());
 });
 
-// gulp.src('./scss/*.scss')
-//   .pipe(sourcemaps.init())
-//     .pipe(sass())
-//   .pipe(sourcemaps.write('./maps'))
-//   .pipe(gulp.dest('./css'));
-
-
-
-
-
 // Scripts
 gulp.task('scripts', function () {
-    return browserify('./app/scripts/app.js')
+    return browserify('./ui/scripts/app.js')
             .bundle()
             .pipe(source('app.js'))
             .pipe(gulp.dest('dist/scripts'))
@@ -50,7 +39,7 @@ gulp.task('scripts', function () {
 
 
 gulp.task('jade', function () {
-    return gulp.src('app/template/*.jade')
+    return gulp.src('ui/template/*.jade')
         .pipe($.jade({ pretty: true }))
         .pipe(gulp.dest('dist'));
 })
@@ -59,7 +48,7 @@ gulp.task('jade', function () {
 
 // HTML
 gulp.task('html', function () {
-    return gulp.src('app/*.html')
+    return gulp.src('ui/*.html')
         .pipe($.useref())
         .pipe(gulp.dest('dist'))
         .pipe($.size());
@@ -67,7 +56,7 @@ gulp.task('html', function () {
 
 // Images
 gulp.task('images', function () {
-    return gulp.src('app/images/**/*')
+    return gulp.src('./ui/images/**/*')
         .pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,
@@ -81,7 +70,7 @@ gulp.task('images', function () {
 
 gulp.task('jest', function () {
     var nodeModules = path.resolve('./node_modules');
-    return gulp.src('app/scripts/**/__tests__')
+    return gulp.src('ui/scripts/**/__tests__')
         .pipe($.jest({
             scriptPreprocessor: nodeModules + '/gulp-jest/preprocessor.js',
             unmockedModulePathPatterns: [nodeModules + '/react']
@@ -98,9 +87,9 @@ gulp.task('clean', function (cb) {
 
 // Bundle
 gulp.task('bundle', ['styles', 'scripts', 'bower'], function(){
-    return gulp.src('./app/*.html')
+    return gulp.src('./ui/*.html')
                .pipe($.useref.assets())
-               .pipe($.useref.restore())
+//               .pipe($.useref.restore())
                .pipe($.useref())
                .pipe(gulp.dest('dist'));
 });
@@ -122,13 +111,13 @@ gulp.task('serve', function () {
 
 // Bower helper
 gulp.task('bower', function() {
-    gulp.src('app/bower_components/**/*.js', {base: 'app/bower_components'})
+    gulp.src('ui/bower_components/**/*.js', {base: 'ui/bower_components'})
         .pipe(gulp.dest('dist/bower_components/'));
 
 });
 
 gulp.task('json', function() {
-    gulp.src('app/scripts/json/**/*.json', {base: 'app/scripts'})
+    gulp.src('ui/scripts/json/**/*.json', {base: 'ui/scripts'})
         .pipe(gulp.dest('dist/scripts/'));
 });
 
@@ -137,26 +126,21 @@ gulp.task('json', function() {
 gulp.task('watch', ['html', 'bundle', 'serve'], function () {
 
     // Watch .json files
-    gulp.watch('app/scripts/**/*.json', ['json']);
+    gulp.watch('ui/scripts/**/*.json', ['json']);
 
     // Watch .html files
-    gulp.watch('app/*.html', ['html']);
+    gulp.watch('ui/*.html', ['html']);
 
     
     // Watch .scss files
-    gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('ui/styles/**/*.scss', ['styles']);
     
-
-
     // Watch .jade files
-    gulp.watch('app/template/**/*.jade', ['jade', 'html']);
-
-
-
+    gulp.watch('ui/template/**/*.jade', ['jade', 'html']);
 
     // Watch .js files
-    gulp.watch('app/scripts/**/*.js', ['scripts', 'jest' ]);
+    gulp.watch('ui/scripts/**/*.js', ['scripts', 'jest' ]);
 
     // Watch image files
-    gulp.watch('app/images/**/*', ['images']);
+    gulp.watch('ui/images/**/*', ['images']);
 });

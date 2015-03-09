@@ -1,11 +1,9 @@
 var express = require('express');
-var csv = require('express-csv');
-
 
 var router = express.Router();
 
-var projects = require('../../portfolio.json');
-var skills = require('../../skills.json');
+var projects = require('../portfolio.json');
+var skills = require('../skills.json');
 
 //My Mongodb integration
 // var mongoose = require('mongoose');

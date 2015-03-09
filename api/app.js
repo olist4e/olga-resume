@@ -10,10 +10,6 @@ var contentDisposition = require('content-disposition')
 
 var routes = require('./routes/index');
 
-var mongoose = require('mongoose');
-
-var projects = require('./routes/projects');
-
 var app = express();
 
 // view engine setup
@@ -58,7 +54,6 @@ function setHeaders(res, path) {
 }
 
 app.use('/', routes);
-app.use('/projects', projects);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -90,14 +85,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
-mongoose.connect('mongodb://localhost/dataServer', function(err) {
-    if(err) {
-        console.log('connection error', err);
-    } else {
-        console.log('connection successful');
-    }
-});
-
 
 module.exports = app;
