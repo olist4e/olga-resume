@@ -11,25 +11,26 @@ var skills = require('../skills.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
- res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Express' });
 });
 
 router.get('/skills', function(req,res, next){
-	res.json(skills);
+    res.json(skills);
 })
 
 router.get('/projects', function(req,res, next){
-	res.json(projects);
+    res.json(projects);
 })
 
 router.get('/projects/:id', function(req, res, next){
-	for (var i=0; i < projects.length; i++){
-		if (projects[i]._id == req.params.id){
-			res.json(projects[i])
-		}
-	}
+    for (var i=0; i < projects.length; i++){
+        if (projects[i]._id == req.params.id){
+            res.json(projects[i]);
+            return;
+        }
+    }
 
-	res.json([]);
+    res.json([]);
 
 })
 
