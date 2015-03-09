@@ -11,7 +11,7 @@ var skills = require('../skills.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+ res.render('index', { title: 'Express' });
 });
 
 router.get('/skills', function(req,res, next){
@@ -29,7 +29,7 @@ router.get('/projects/:id', function(req, res, next){
 		}
 	}
 
-	res.json([])
+	res.json([]);
 
 })
 
