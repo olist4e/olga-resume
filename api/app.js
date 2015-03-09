@@ -42,8 +42,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-
 app.use('/', routes);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
