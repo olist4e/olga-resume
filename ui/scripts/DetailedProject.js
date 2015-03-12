@@ -55,14 +55,12 @@ var DetailedProject = React.createClass({
     return (
        <div>
           <div className="project-content">
-           <a className="project-header" href={constructLink(this.state.project.eLink)}>{constructHeader(this.state.project)}</a><Link href="/projects">Back to project list</Link>
+            <div className="project-header"><a href={constructLink(this.state.project.eLink)}>{constructHeader(this.state.project)}</a></div>
             <div className="project-banner" style={backgroundInline(this.state.project.banner)}></div>
             <span className="sub-header">1.CHALLENGE</span>
              <p>{this.state.project.challenge}</p>
-           
             <span className="sub-header">2. PROCESS</span>
              <p>{this.state.project.process}</p>
-
             <span className="sub-header">3. SOLUTION</span>
              <p>{this.state.project.solution}</p>
 

@@ -142,7 +142,7 @@ ul.navigation-links{
     font-family: 'New Gothic MT', sans-serif;
 }
 
-
+a:hover{ text-decoration:none; }
 a.section{
    display: block; 
    position: relative; 
@@ -151,6 +151,7 @@ a.section{
 }
 
 div#projects{
+    padding-top: 50px;
 }
 
 div.project-list { 
@@ -215,7 +216,6 @@ div.project{
 
 /*Project content details */
 div.project-content{
-    margin-top:14px;
 
     div.project-banner{
         @include respond-to(xxxs) { padding-bottom:40%; }
@@ -236,16 +236,8 @@ div.project-content{
         margin-top: 15px;
     }
 
-    a.project-header { 
+    .project-header { 
         font-size: 18pt; 
-        display: inline-block;
-        float: left;
-        &:hover{ text-decoration:none; }
-    }
-
-    a {
-        display: inline-block;
-        float:right;
     }
 }
 
@@ -284,19 +276,13 @@ div#skills{
     }
 
     #sequence {
-      font-size: small;
+      font-size: x-small;
     }
 
     #legend, #sequence {
       @include respond-to(xxxs) {  padding: 20px 0 0 3px }
       @include respond-to(xxs) {   padding: 20px 0 0 3px; }
-      padding: 14px 0 0 3px;
-      height: 70px;
-    }
-
-    #sequence{
-        padding-top:40px;
-        margin-bottom: 5px;
+    
     }
 
     #sequence text, #legend text {
@@ -309,12 +295,12 @@ div#skills{
         position: absolute;
         width: 140px;
         text-align: center;
-        @include respond-to(xxxs) { top:55%; left: 35%; }
-        @include respond-to(xxs) { top:55%; left: 38%; }
-        @include respond-to(xs) {  top: 55%; left: 40%; }
-        @include respond-to(sm) {  top: 50%; left: 42%; }
-        @include respond-to(md) {  top: 50%; left: 44%; }
-        @include respond-to(lg) {  top: 50%; left: 45%; }
+        @include respond-to(xxxs) { top:55%; left: 32%; }
+        @include respond-to(xxs) { top:55%; left: 36%; }
+        @include respond-to(xs) {  top: 55%; left: 38%; }
+        @include respond-to(sm) {  top: 50%; left: 41%; }
+        @include respond-to(md) {  top: 50%; left: 43%; }
+        @include respond-to(lg) {  top: 50%; left: 44%; }
 
         #percentage {font-size:large; font-weight:bold;}
     }

@@ -41,7 +41,7 @@ var lColors = {
 }
 
 var b = {
-  w: 100, h: 30, s: 3, t: 10
+  w: 110, h: 30, s: 3, t: 10
 };
 
 function buildHierarchy(csv) {
@@ -143,7 +143,7 @@ d3Chart._drawLegend = function() {
   // var lw = d3.select("#legend")[0][0].clientWidth;
     // Dimensions of legend item: width, height, hight of the label, spacing, radius of rounded rect.
     var li = {
-      w: 60, h: 60, hl:30, s: 3, r: 0
+      w: 60, h: 60, hl:30, s: 2, r: 0
     };
 
     var legend = d3.select("#legend").append("svg:svg")
