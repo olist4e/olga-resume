@@ -238,12 +238,12 @@ div.project-content{
 /* Skill info  on the main page*/
 div#skills{
     overflow: auto;
-    @include respond-to(xxxs) {  height: 400px;}
-    @include respond-to(xxs) {  height: 400px;}
-    @include respond-to(xs) {  height: 500px;}
-    @include respond-to(sm) {  height: 600px;}
-    @include respond-to(md) {  height: 650px; }
-    @include respond-to(lg) {  height: 750px; }
+    // @include respond-to(xxxs) {  height: 400px;}
+    // @include respond-to(xxs) {  height: 400px;}
+    // @include respond-to(xs) {  height: 500px;}
+    // @include respond-to(sm) {  height: 600px;}
+    // @include respond-to(md) {  height: 650px; }
+    // @include respond-to(lg) {  height: 750px; }
     // margin-top: 10px;
     // padding-left:10px;
     // position:relative;
@@ -253,12 +253,12 @@ div#skills{
         
          margin-left: auto;
          margin-right: auto;
-        //  @include respond-to(xxxs) {  height: 400px; width:90%;}
-        // @include respond-to(xxs) {  height: 400px; width:90%;}
-        // @include respond-to(xs) {  height: 500px; width:80%;}
-        // @include respond-to(sm) {  height: 600px; width:70%;}
-        // @include respond-to(md) {  height: 650px; width:60%;}
-        // @include respond-to(lg) {  height: 750px;  width:60%;}
+         @include respond-to(xxxs) {  height: 300px; width:85%;}
+        @include respond-to(xxs) {  height: 420px; width:90%;}
+        @include respond-to(xs) {  height: 525px; width:90%;}
+        @include respond-to(sm) {  height: 600px; width:75%; }
+        @include respond-to(md) {  height: 700px; width:70%; }
+        @include respond-to(lg) {  height: 800px; width:65%;}
          path {
            stroke: #000;
            stroke-width: 0.5;
@@ -266,8 +266,18 @@ div#skills{
          }
 
          text {
-           font: 11px sans-serif;
+            @include respond-to(xxxs) {  font: 8px sans-serif;}
+            @include respond-to(xxs) {  font: 8px sans-serif;}
+            @include respond-to(xs) {  font: 10px sans-serif;}
+            @include respond-to(sm) { font: 11px sans-serif; }
+            @include respond-to(md) { font: 11px sans-serif; }
+            @include respond-to(lg) { font: 12px sans-serif;}
+           font: 28px sans-serif;
            cursor: pointer;
+         }
+
+         svg {
+            overflow: visible;
          }
         }
 

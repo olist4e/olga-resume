@@ -32,7 +32,7 @@ var SunChart = React.createClass({
     renderChart: function() {
       var el = this.getDOMNode();
       $(el).empty(); 
-      var sunburst = $("#sunburst");
+      var sunburst = $(".sunburst");
       var vis = d3Chart.create(el, {
         width: sunburst.width(),
         height: sunburst.height()
