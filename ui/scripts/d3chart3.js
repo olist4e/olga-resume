@@ -61,7 +61,14 @@ var draw = function(el, config, data) {
       .attr("height", height + padding * 2)
     .append("g")
       .attr("transform", "translate(" + [radius + padding, radius + padding] + ")");
-  
+ 
+  var tooltip = d3.select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("opacity", 0);
+   
   div.append("p")
       .attr("id", "intro")
       .text("Click to zoom!");
@@ -84,7 +91,26 @@ var draw = function(el, config, data) {
         .attr("d", arc)
         .attr("fill-rule", "evenodd")
         .style("fill", colour)
-        .on("click", click);
+        .on("click", click)
+        .on("mouseover", function(d) {
+          tooltip.html(function() {
+              if(d.size) {
+                var name = d.size + " years of experience" ;
+              } else {
+                var name = "";
+              }
+              return name;
+         });
+          return tooltip.transition()
+            .duration(50)
+            .style("opacity", 0.9);
+        })
+        .on("mousemove", function(d) {
+          return tooltip
+            .style("top", (d3.event.pageY-10)+"px")
+            .style("left", (d3.event.pageX+10)+"px");
+        })
+        .on("mouseout", function(){return tooltip.style("opacity", 0);});
   
     var text = vis.selectAll("text").data(nodes);
     var textEnter = text.enter().append("text")
