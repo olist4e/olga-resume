@@ -64,13 +64,6 @@ var SunChart = React.createClass({
       var size = $("#skills").width() - 20;
       return (
         <div className="sunburst" data={this.state.data}  >
-          <div>
-       	    <div id="initial-text">Hover to see more skills</div>
-	    <div id="explanation" style={expStyle}>
-	        <span id="percentage"></span> years<br/>
-		            doing <span id="skillz"></span>
-	    </div>
-	  </div>
         </div>
       );
     }

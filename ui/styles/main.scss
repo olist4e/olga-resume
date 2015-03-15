@@ -248,18 +248,6 @@ div#skills{
     padding-left:10px;
     position:relative;
 
-    div#download-resume{
-        position:absolute;
-        @include respond-to(xxxs) {  top:64px; left:10px; }
-        @include respond-to(xxs) {  top:64px; left:10px; }
-        @include respond-to(xs) {  top:32px; right:10px; }
-        @include respond-to(sm) {  top:32px; right:10px; }
-        @include respond-to(md) {  top:32px; right:10px; }
-        @include respond-to(lg) {  top:32px; right:10px; }
-        
-
-    }
-
     .sunburst {
      position:relative;
      // @include respond-to(xs) { padding-bottom:40%; }
