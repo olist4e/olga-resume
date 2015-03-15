@@ -69,13 +69,9 @@ var draw = function(el, config, data) {
     .style("z-index", "10")
     .style("opacity", 0);
    
-  div.append("p")
-      .attr("id", "intro")
-      .text("Click to zoom!");
-  
   var partition = d3.layout.partition()
       .sort(null)
-      .value(function(d) { return 5.8 - d.depth; });
+      .value(function(d) { return d.size; });
   
   var arc = d3.svg.arc()
       .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
@@ -91,26 +87,7 @@ var draw = function(el, config, data) {
         .attr("d", arc)
         .attr("fill-rule", "evenodd")
         .style("fill", colour)
-        .on("click", click)
-        .on("mouseover", function(d) {
-          tooltip.html(function() {
-              if(d.size) {
-                var name = d.size + " years of experience" ;
-              } else {
-                var name = "";
-              }
-              return name;
-         });
-          return tooltip.transition()
-            .duration(50)
-            .style("opacity", 0.9);
-        })
-        .on("mousemove", function(d) {
-          return tooltip
-            .style("top", (d3.event.pageY-10)+"px")
-            .style("left", (d3.event.pageX+10)+"px");
-        })
-        .on("mouseout", function(){return tooltip.style("opacity", 0);});
+        .on("click", click);
   
     var text = vis.selectAll("text").data(nodes);
     var textEnter = text.enter().append("text")
@@ -129,13 +106,33 @@ var draw = function(el, config, data) {
           return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")";
         })
         .on("click", click);
+
+    function textFormatter(line) {
+        return function(d) {
+          if(d.depth == 0) {
+            return "";
+          }
+
+          if(line == 0) {
+	    return d.name.split(" ")[0];
+          } else if(line == 1) {
+	    return (d.name.split(" ")[1] || "");
+          } else if(line == 2) {
+            return d.size + " years";
+          }
+        }
+    }
     textEnter.append("tspan")
         .attr("x", 0)
-        .text(function(d) { return d.depth ? d.name.split(" ")[0] : ""; });
+        .text(textFormatter(0));
     textEnter.append("tspan")
         .attr("x", 0)
         .attr("dy", "1em")
-        .text(function(d) { return d.depth ? d.name.split(" ")[1] || "" : ""; });
+        .text(textFormatter(1));
+    textEnter.append("tspan")
+        .attr("x", 0)
+        .attr("dy", "1em")
+        .text(textFormatter(2));
   
     function click(d) {
       path.transition()

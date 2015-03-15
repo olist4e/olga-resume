@@ -2,9 +2,8 @@
 
 ["dev","5"],
 ["ux", "4"],
-["agile","4"],
 
-["dev-javascript","4"],
+["dev-javascript","5"],
 ["dev-javascript-d3","3"],
 ["dev-javascript-jquery","4"],
 ["dev-javascript-react","0.5"],
@@ -14,8 +13,12 @@
 ["dev-html","5"],
 
 ["dev-css","5"],
+["dev-css-less","5"],
+["dev-css-sass","1"],
 
 ["dev-python","4"],
+["dev-python-django","4"],
+["dev-python-numpy/scipy","4"],
 
 
 
