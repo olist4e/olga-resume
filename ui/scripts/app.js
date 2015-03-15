@@ -9,7 +9,7 @@ var SunChart = require('./SunChart');
 var Project = require('./Project');
 var DetailedProject = require('./DetailedProject');
 var ProjectList = require('./ProjectList');
-
+var NavLinks = require('./NavLinks.js');
 //var d3Chart = require('./d3Chart');
 
 //Data route
@@ -27,6 +27,8 @@ var dataSkills = DATA_ROOT + "/skills";
 //var dataSkills = 'wheel.json';
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 
+React.render(<NavLinks />, document.getElementById("nav-container"))
+
 var App = React.createClass({
   nagivateTo:function(href){
     this.refs.ThisRouter.navigate(href);
@@ -40,7 +42,6 @@ var App = React.createClass({
         <Location path="/project/:projectId" handler={ DetailedProject } source={dataUrl} />
         <Location path="/" handler={ ProjectList }  source={dataUrl} />
         <Location path="/projects" handler={ ProjectList }  source={dataUrl} />
-       
       </Locations>
     )
   }

@@ -23,6 +23,11 @@ var DetailedProject = React.createClass({
         this.setState({"project": result});
       }
     }.bind(this));
+    $('html,body').animate({
+              scrollTop: $("#projects").offset().top-80
+            }, 1000);
+
+
   },
   render: function(){
     var createContribs = function(contrib){
@@ -33,8 +38,6 @@ var DetailedProject = React.createClass({
       var URL ="../images/"+image;
       return {background: 'url(' + URL + ') center center no-repeat' }
     };
-
-    console.log(this)
 
     var results;
 
