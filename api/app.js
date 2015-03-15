@@ -19,7 +19,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main', layoutsDir: path.join(__
 app.set('view engine', 'handlebars');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 //app.use(logger('dev'));
 
 // Add headers
