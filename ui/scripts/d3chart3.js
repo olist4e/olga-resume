@@ -122,8 +122,18 @@ var draw = function(el, config, data) {
           }
         }
     }
+
+    function textOffset(d) {
+       var length = d.name.split(" ");
+       if(length > 2) {
+         return "-1em";
+       } else {
+         return 0;
+       }
+    }
     textEnter.append("tspan")
         .attr("x", 0)
+        .attr("dy", textOffset)
         .text(textFormatter(0));
     textEnter.append("tspan")
         .attr("x", 0)
