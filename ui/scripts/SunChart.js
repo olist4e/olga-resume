@@ -33,8 +33,7 @@ var SunChart = React.createClass({
       var el = this.getDOMNode();
       $(el).empty(); 
       var vis = d3Chart.create(el, {
-        width: el.clientWidth,
-        height: '500'
+        width: el.clientWidth < 350 ? el.clientWidth : el.clientWidth/2.,
       }, this.getChartState());
 
     },

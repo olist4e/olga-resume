@@ -44,7 +44,7 @@ function buildHierarchy(csv) {
 var draw = function(el, config, data) {
   var json = buildHierarchy(data);
 
-  var width = (config.width || 840)/2,
+  var width = (config.width || 840),
       height = width,
       radius = width / 2,
       x = d3.scale.linear().range([0, 2 * Math.PI]),
