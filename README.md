@@ -36,7 +36,6 @@ NODE_ENV=production bin/www
 
 # Deploying
 Install docker (see https://docs.docker.com/installation/)
-Install docker-compose (see http://docs.docker.com/compose/)
 
 ## Build the base image
 You only need to do this when you change the dependencies
@@ -45,8 +44,18 @@ You only need to do this when you change the dependencies
 ./init.sh
 ```
 
-## Build the data and app images
+## Build the app image
 
-Run docker-compose up -d from this directory
+```
+docker build -t ohworth/olga-resume .
+docker push ohworth/olga-resume
+```
 
-To restart, docker-compose restart
+## Deploy the image
+
+```
+ssh dev.ohworth.com
+sudo salt-call state.highstate
+```
+
+
