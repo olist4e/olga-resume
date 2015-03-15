@@ -272,6 +272,16 @@ div#skills{
      // @include respond-to(sm) { padding-bottom:35%; }
      // @include respond-to(md) { padding-bottom:25%; }
      // @include respond-to(lg) { padding-bottom:25%; }
+     path {
+       stroke: #000;
+       stroke-width: 1.5;
+       cursor: pointer;
+     }
+
+     text {
+       font: 11px sans-serif;
+       cursor: pointer;
+     }
     }
 
     #sequence {

@@ -1,5 +1,5 @@
 var React = window.React = require('react');
-var d3Chart = require('./d3Chart2');
+var d3Chart = require('./d3Chart3');
 
 var SunChart = React.createClass({
   propTypes:{
@@ -23,35 +23,19 @@ var SunChart = React.createClass({
 
     $(window).on('resize', this.updateContainerSize);
 
-    this.renderChart();
-   
     },
 
     componentDidUpdate: function() {
-      this.updateChart();
+      this.renderChart();
     },
 
     renderChart: function() {
-      console.log("Render chart");
       var el = this.getDOMNode();
+      $(el).empty(); 
       var vis = d3Chart.create(el, {
         width: el.clientWidth,
         height: '500'
       }, this.getChartState());
-
-      this.setState({vis: vis});
-    },
-
-    updateChart: function() {
-      console.log("Update chart");
-      var el = this.getDOMNode();
-      var vis = this.state.vis;
-      if(vis != null) {
-        d3Chart.update(vis, el, {
-          width: el.clientWidth,
-          height: '400'
-        }, this.getChartState());
-      }
 
     },
 
@@ -70,9 +54,7 @@ var SunChart = React.createClass({
       if (this.state.containerSize != size){
         this.setState({containerSize: size})
       }
-      $(this.getDOMNode()).empty();
-      this.renderChart();
-      this.updateChart();
+      //this.renderChart();
     },
 
     render: function() {
@@ -81,7 +63,7 @@ var SunChart = React.createClass({
    	//Subtract 20 pixels from parent container to make sure that we don't run off the screen
       var size = $("#skills").width() - 20;
       return (
-        <div className="sunburst" data={this.state.data}  containerSize={size} >
+        <div className="sunburst" data={this.state.data}  >
           <div>
        	    <div id="initial-text">Hover to see more skills</div>
 	    <div id="explanation" style={expStyle}>
