@@ -44,21 +44,22 @@ function buildHierarchy(csv) {
 var draw = function(el, config, data) {
   var json = buildHierarchy(data);
 
-  var width = (config.width || 840),
-      height = width,
-      radius = width / 2,
+  var padding = 5,
+      width = config.width - padding*2,
+      height = config.height - padding*2,
+      radius = Math.min(width, height) / 2,
       x = d3.scale.linear().range([0, 2 * Math.PI]),
       y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, radius]),
-      padding = 5,
       duration = 1000;
+  console.log(config, width, height, radius);
   
   var div = d3.select(el);
   
   div.select("img").remove();
   
   var vis = div.append("svg")
-      .attr("width", width + padding * 2)
-      .attr("height", height + padding * 2)
+      .attr("width", width )
+      .attr("height", height)
     .append("g")
       .attr("transform", "translate(" + [radius + padding, radius + padding] + ")");
  
