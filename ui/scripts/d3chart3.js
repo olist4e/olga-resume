@@ -51,7 +51,6 @@ var draw = function(el, config, data) {
       x = d3.scale.linear().range([0, 2 * Math.PI]),
       y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, radius]),
       duration = 1000;
-  console.log(config, width, height, radius);
   
   var div = d3.select(el);
   
