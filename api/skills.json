@@ -18,22 +18,21 @@
 
 ["dev-python","4"],
 ["dev-python-django","4"],
-["dev-python-numpy/scipy","4"],
 
 
 
-["ux-design","4"],
-["ux-design-axure","2"],
-["ux-design-photoshop","2"],
-["ux-design-illustrator","2"],
-["ux-design-prototyping","4"],
-["ux-design-story boarding","2"],
+["ux-Design","4"],
+["ux-Design-Axure","2"],
+["ux-Design-Photoshop","2"],
+["ux-Design-Illustrator","2"],
+["ux-Design-Prototyping","4"],
+["ux-Design-Storyboarding","2"],
 
-["ux-research","2"],
-["ux-research-usability testing","2"],
-["ux-research-contextual inquiry","2"],
-["ux-research-scenarios","2"],
-["ux-research-personas","2"],
-["ux-research-heuristic evaluation","2"]
+["ux-Research","2"],
+["ux-Research-Usability testing","2"],
+["ux-Research-Contextual inquiry","2"],
+["ux-Research-Ccenarios","2"],
+["ux-Research-Personas","2"],
+["ux-Research-Heuristic evaluation","2"]
 
 ]

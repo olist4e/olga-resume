@@ -190,19 +190,19 @@ var draw = function(el, config, data) {
     
       "ux": "#800517", //Firebrick
       
-      "design": "#A82D3F",
-      "axure" : "#F87D8F",
-      "photoshop" : "#E4697B",
-      "illustrator" : "#DA5F71",
-      "prototyping" : "#BC4153",
-      "story boarding" : "#EE7385",
+      "Design": "#A82D3F",
+      "Axure" : "#F87D8F",
+      "Photoshop" : "#E4697B",
+      "Illustrator" : "#DA5F71",
+      "Prototyping" : "#BC4153",
+      "Storyboarding" : "#EE7385",
     
-      "research": "#6C0003",
-      "usability testing": "#260000",
-      "contextual inquiry" : "#3A0000",
-      "scenarios" : "#4E0000",
-      "personas" : "#620000",
-      "heuristic evaluation" : "#1C0000",
+      "Research": "#6C0003",
+      "Usability testing": "#260000",
+      "Contextual inquiry" : "#3A0000",
+      "Scenarios" : "#4E0000",
+      "Personas" : "#620000",
+      "Heuristic evaluation" : "#1C0000",
     
       "agile":"#801C05"
       
