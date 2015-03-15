@@ -24,6 +24,7 @@ var Link = Router.Link;
 
 
 var dataSkills = DATA_ROOT + "/skills";
+var dataSkills = 'wheel.json';
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 
 var App = React.createClass({

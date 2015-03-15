@@ -1,5 +1,5 @@
 var React = window.React = require('react');
-var d3Chart = require('./d3Chart');
+var d3Chart = require('./d3Chart2');
 
 var SunChart = React.createClass({
   propTypes:{
@@ -15,76 +15,83 @@ var SunChart = React.createClass({
     };
   },
   componentDidMount: function() {
-
-  	 $.get(this.props.source, function(result){
-      // console.log(result);
+    $.get(this.props.source, function(result){
       if (this.isMounted()){
         this.setState({data: result});
       }
     }.bind(this));
 
-   	$(window).on('resize', this.updateContainerSize);
-     var el = this.getDOMNode();
-     d3Chart.create(el, {
-       width: el.clientWidth,
-       height: '500'
-     }, this.getChartState());
-   },
+    $(window).on('resize', this.updateContainerSize);
 
-   componentDidUpdate: function() {
-    var el = this.getDOMNode();
-    d3Chart.update(el, {
-       width: el.clientWidth,
-       height: '400'
-     }, this.getChartState());
-   },
+    this.renderChart();
+   
+    },
 
-   getChartState: function() {
-   	// console.log(this.props)
-    //  	console.log(this.state)
-     return {
+    componentDidUpdate: function() {
+      this.updateChart();
+    },
 
-       data: this.state.data
-     };
-   },
+    renderChart: function() {
+      console.log("Render chart");
+      var el = this.getDOMNode();
+      var vis = d3Chart.create(el, {
+        width: el.clientWidth,
+        height: '500'
+      }, this.getChartState());
 
-   componentWillUnmount: function() {
-   	$(window).off('resize', this.updateContainerSize);
-     var el = this.getDOMNode();
-     d3Chart.destroy(el);
-   },
+      this.setState({vis: vis});
+    },
 
-   updateContainerSize:function() {
-    var size = $("#skills").width();
-    // console.log(this.state)
-    // console.log(size)
-    if (this.state.containerSize != size){
-	    // console.log("UPDATE called")
-	   	this.setState({containerSize: size})
-    }
-   	
-   },
+    updateChart: function() {
+      console.log("Update chart");
+      var el = this.getDOMNode();
+      var vis = this.state.vis;
+      if(vis != null) {
+        d3Chart.update(vis, el, {
+          width: el.clientWidth,
+          height: '400'
+        }, this.getChartState());
+      }
 
-   // componentWillMount: function() {
-   // 	this.updateContainerSize();
-   // },
+    },
 
-   render: function() {
-   	var expStyle = {visibility: 'hidden'}
+    getChartState: function() {
+      return this.state.data;
+    },
+
+    componentWillUnmount: function() {
+      $(window).off('resize', this.updateContainerSize);
+      var el = this.getDOMNode();
+      d3Chart.destroy(el);
+    },
+
+    updateContainerSize:function() {
+      var size = $("#skills").width();
+      if (this.state.containerSize != size){
+        this.setState({containerSize: size})
+      }
+      $(this.getDOMNode()).empty();
+      this.renderChart();
+      this.updateChart();
+    },
+
+    render: function() {
+      var expStyle = {visibility: 'hidden'}
+
    	//Subtract 20 pixels from parent container to make sure that we don't run off the screen
-   	var size = $("#skills").width() - 20;
-     return (
-       <div className="sunburst" data={this.state.data}  containerSize={size} >
-       		<div>
-       			<div id="initial-text">Hover to see more skills</div>
-		        <div id="explanation" style={expStyle}>
-			        <span id="percentage"></span> years<br/>
+      var size = $("#skills").width() - 20;
+      return (
+        <div className="sunburst" data={this.state.data}  containerSize={size} >
+          <div>
+       	    <div id="initial-text">Hover to see more skills</div>
+	    <div id="explanation" style={expStyle}>
+	        <span id="percentage"></span> years<br/>
 		            doing <span id="skillz"></span>
-		            </div>
-	        </div>
-       </div>
-     );
-   }
+	    </div>
+	  </div>
+        </div>
+      );
+    }
 });
 
 
