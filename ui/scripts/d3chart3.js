@@ -186,6 +186,7 @@ var draw = function(el, config, data) {
   
   function colour(d) {
     var colours = {
+      "root":"#FFFFFF",
       "dev": "#0000A0", //Navi blue
       "javascript": "#3600A1",
       "jquery": "#400AAB",
@@ -195,7 +196,11 @@ var draw = function(el, config, data) {
     
       "html":"#8600A1",
       "css":"#A10086",
+      "sass":"#F150D6",
+      "less":"#510036",
+
       "python":"#1B00A1",
+      "django":"#6146E7",
     
     
       "ux": "#800517", //Firebrick

@@ -18,6 +18,9 @@ var ProjectList = React.createClass({
         this.setState({"projects": result});
       }
     }.bind(this));
+    $('html,body').animate({
+            scrollTop: $("#projects").offset().top-80
+          }, 1000);
   },
 
   render: function(){
