@@ -20,8 +20,6 @@ var Project = React.createClass({
 
     var imageClassString = "project-image";
 
-    // console.log(this.props)
-
     return (
         <div className={projectClassString(this.props.project._id)} >
           <Link href= {produceLink(this.props.project._id)}>

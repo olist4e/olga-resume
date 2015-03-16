@@ -3,21 +3,17 @@ var Project = require("./Project");
 
 var ProjectList = React.createClass({
   getInitialState: function(){
-    return { projects: [{
-      projectId:null,
-      position:"",
-      image:""
-    }]}
+    return { projects: []}
   },
 
   componentDidMount: function(){
  
     $.get(this.props.source, function(result){
-      // console.log(result);
       if (this.isMounted()){
         this.setState({"projects": result});
       }
     }.bind(this));
+
     $('html,body').animate({
             scrollTop: $("#projects").offset().top-80
           }, 1000);
