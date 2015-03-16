@@ -28,8 +28,8 @@ var NavLinks = React.createClass({
     return (
       <ul className="navigation-links">
       <li> <NavLink nlink={assemble(["Projects","#/projects","nav-link nav-project-link", "#projects"])} /></li>
-      <li> <NavLink nlink={assemble(["Skills","#skills","nav-link nav-skills-link", "#skills"])} /></li>
-      <li> <NavLink nlink={assemble(["Contact","#contact","nav-link nav-contact-link", "#contacts"])} /></li>
+      <li> <NavLink nlink={assemble(["Skills","#/skills","nav-link nav-skills-link", "#skills"])} /></li>
+      <li> <NavLink nlink={assemble(["Contact","#/contact","nav-link nav-contact-link", "#contacts"])} /></li>
       </ul>
     )
   },
