@@ -21,7 +21,7 @@ var ProjectList = React.createClass({
 
   render: function(){
     var createProject = function(project){
-      return <Project project={project} />
+      return <Project project={project} key={project._id} />
     }
 
     var classString = "project-list";
