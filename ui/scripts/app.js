@@ -10,7 +10,6 @@ var Project = require('./Project');
 var DetailedProject = require('./DetailedProject');
 var ProjectList = require('./ProjectList');
 var NavLinks = require('./NavLinks.js');
-//var d3Chart = require('./d3Chart');
 
 //Data route
 var DATA_ROOT = "";
@@ -46,6 +45,6 @@ var App = React.createClass({
   }
 });
 
-React.renderComponent(App(), projectsMount);
+React.render(<App />, projectsMount);
 
 
