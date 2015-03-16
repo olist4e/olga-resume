@@ -1,5 +1,5 @@
 var React = window.React = require('react');
-var d3Chart = require('./d3Chart3');
+var d3Chart = require('./sunburst');
 
 var SunChart = React.createClass({
   propTypes:{
