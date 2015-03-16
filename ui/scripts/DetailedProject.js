@@ -18,11 +18,11 @@ var DetailedProject = React.createClass({
     var projectURL = this.props.source + "/" + this.props.projectId;
 
     $.get(projectURL, function(result){
-      // console.log(result);
       if (this.isMounted()){
         this.setState({"project": result});
       }
     }.bind(this));
+
     $('html,body').animate({
               scrollTop: $("#projects").offset().top-80
             }, 1000);
@@ -30,6 +30,9 @@ var DetailedProject = React.createClass({
 
   },
   render: function(){
+    if(this.state.project._id == null) {
+      return <div></div>;
+    }
     var createContribs = function(contrib){
       return (<li>{contrib}</li>)
     };
