@@ -14,20 +14,26 @@ var DetailedProject = React.createClass({
       contributions: [],
     }} 
   },
-  componentDidMount:function(){
-    var projectURL = this.props.source + "/" + this.props.projectId;
+  getProjectData:function(url){
 
-    $.get(projectURL, function(result){
+    $.get(url, function(result){
       if (this.isMounted()){
         this.setState({"project": result});
       }
     }.bind(this));
-
-    $('html,body').animate({
-              scrollTop: $("#projects").offset().top-80
-            }, 1000);
-
-
+  },
+  getProjectUrl:function(props){
+    var projectURL = props.source + "/" + props.projectId;
+    return projectURL;
+  },
+  componentWillReceiveProps:function(props){
+    this.getProjectData(this.getProjectUrl(props));
+  },
+  componentDidMount:function(){
+    this.getProjectData(this.getProjectUrl(this.props));
+    // $('html,body').animate({
+    //           scrollTop: $("#projects").offset().top-80
+    //         }, 1000);
   },
   render: function(){
     if(this.state.project._id == null) {
@@ -58,10 +64,21 @@ var DetailedProject = React.createClass({
       return "http://" + url;
     }
 
+    var calculateProjectUrl = function(cid){
+      // console.log(cid);
+      cid = parseInt(cid);
+      if (cid == 6){
+        return "#/project/1"
+      }
+      return "#/project/" + (cid + 1);
+    }
     return (
        <div>
           <div className="project-content">
-            <div className="project-header"><a href={constructLink(this.state.project.eLink)}>{constructHeader(this.state.project)}</a></div>
+            <div className="project-header">
+              <a href={constructLink(this.state.project.eLink)}>{constructHeader(this.state.project)}</a>
+              <Link className="back-to-projects-top" href="/projects">Back to project list</Link>
+            </div>
             <div className="project-banner" style={backgroundInline(this.state.project.banner)}></div>
             <span className="sub-header">1.CHALLENGE</span>
              <p>{this.state.project.challenge}</p>
@@ -75,6 +92,7 @@ var DetailedProject = React.createClass({
            
           </div>
           <Link href="/projects">Back to project list</Link>
+          <Link className="next-project" href={calculateProjectUrl(this.props.projectId)}>Next Project</Link>
         </div>
 
         )

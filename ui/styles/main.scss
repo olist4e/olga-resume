@@ -208,6 +208,30 @@ div.project{
     }
 }
 
+/*complete project seciton */
+div#projects{
+    .project-header { 
+        font-size: 18pt; 
+        @include respond-to(xxxs) { height:60px; font-size: 14pt; }
+        @include respond-to(xxs) { height:60px; font-size: 14pt; }
+        @include respond-to(xs) { height:60px; font-size: 14pt;}
+
+        a{
+            @include respond-to(xxxs) { display:block; float:left;}
+        }
+    }
+
+    .back-to-projects-top, .next-project{
+        display: inline-block;
+        @include respond-to(xxxs) { display:block;  padding-top:10px; }
+        @include respond-to(xxs) { display:block; padding-top:10px; }
+        @include respond-to(xs) { display:block; padding-top:10px; }
+        @include respond-to(sm) { float:right}
+        @include respond-to(md) { float:right }
+        @include respond-to(lg) { float:right; }
+    }
+}
+
 /*Project content details */
 div.project-content{
 
@@ -228,10 +252,6 @@ div.project-content{
         }
 
         margin-top: 15px;
-    }
-
-    .project-header { 
-        font-size: 18pt; 
     }
 }
 

@@ -11,11 +11,11 @@ var NavLink = React.createClass({
   handleClick:function(){
     var target = $(this.props.nlink.scrollTo)[0];
       $('html,body').animate({
-        scrollTop: $(target).offset().top-80
+        scrollTop: $(target).offset().top - 80
       }, 1000);
   },
   render:function(){
-    return (<a className={this.props.nlink.cssClass} onClick={this.handleClick} href={this.props.nlink.href}>{this.props.nlink.name}</a>)
+    return (<a className={this.props.nlink.cssClass} onClick={this.handleClick} >{this.props.nlink.name}</a>)
   }
 });
 

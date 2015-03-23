@@ -14,9 +14,13 @@ var ProjectList = React.createClass({
       }
     }.bind(this));
 
-    $('html,body').animate({
+    // console.log(window.location)
+    if (window.location == "#/projects"){
+        $('html,body').animate({
             scrollTop: $("#projects").offset().top-80
           }, 1000);
+    }
+    
   },
 
   render: function(){
