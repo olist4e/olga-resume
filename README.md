@@ -47,8 +47,8 @@ You only need to do this when you change the dependencies
 ## Build the app image
 
 ```
-docker build -t ohworth/olga-resume .
-docker push ohworth/olga-resume
+docker build -t olist4e/olga-resume .
+docker push olist4e/olga-resume
 ```
 
 ## Deploy the image
