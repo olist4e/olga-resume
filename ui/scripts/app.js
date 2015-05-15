@@ -10,6 +10,7 @@ var Project = require('./Project');
 var DetailedProject = require('./DetailedProject');
 var ProjectList = require('./ProjectList');
 var NavLinks = require('./NavLinks.js');
+var Gallery = require('./Gallery.js');
 
 //Data route
 var DATA_ROOT = "";
@@ -22,6 +23,11 @@ var Location = Router.Location;
 var Link = Router.Link;
 
 var dataSkills = DATA_ROOT + "/skills";
+var images = [
+  {"src": "http://placehold.it/390x390", "caption": "Foo", "title": "A Title"},
+  {"src": "http://placehold.it/390x390", "caption": "Bar"},
+  {"src": "http://placehold.it/390x390", "caption": "Baz"}];
+React.render(<Gallery images={images}/>, document.getElementById("gallery"));
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 React.render(<NavLinks />, document.getElementById("nav-container"))
 
