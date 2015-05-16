@@ -11,6 +11,16 @@ var backgroundInline = function(URL, height){
   return { background: 'url(' + URL + ') no-repeat center center', width: "100%", height: height}
 }
 
+var Slide = React.createClass({
+  render: function() {
+    var item = this.props.item;
+    var height = this.props.height;
+    return <div>
+      <div style={backgroundInline(item.original, height)}><div className={'ImageGallery_content_slides_slide_caption_container'}><div className={'ImageGallery_content_slides_slide_caption_text'}>{item.caption}</div></div></div>
+      </div>
+  }
+})
+
 var ImageGallery = React.createClass({
 
   mixins: [React.addons.PureRenderMixin],
@@ -213,7 +223,7 @@ var ImageGallery = React.createClass({
         <div
           key={index}
           className={'ImageGallery_content_slides_slide ' + alignment}>
-          <div style={backgroundInline(item.original, height)}><div className={'ImageGallery_content_slides_slide_caption_container'}><div className={'ImageGallery_content_slides_slide_caption_text'}>{item.caption}</div></div></div>
+          <Slide item={item} height={height} />
         </div>
       );
 
