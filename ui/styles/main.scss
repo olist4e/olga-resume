@@ -2,6 +2,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/";
 
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "compass";
+@import "ImageGallery";
 
 
 /*** Screen size break downs ***/
@@ -348,6 +349,12 @@ div#contacts{
 
     }
 
+}
+
+/* Project Gallery on the main page */
+div#gallery {
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 div.footer{

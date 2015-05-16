@@ -10,7 +10,7 @@ var Project = require('./Project');
 var DetailedProject = require('./DetailedProject');
 var ProjectList = require('./ProjectList');
 var NavLinks = require('./NavLinks.js');
-var Gallery = require('./Gallery.js');
+var ProjectGallery = require('./ProjectGallery.js');
 
 //Data route
 var DATA_ROOT = "";
@@ -23,11 +23,14 @@ var Location = Router.Location;
 var Link = Router.Link;
 
 var dataSkills = DATA_ROOT + "/skills";
+// Note: Idea is that we add entries like these in images to the projects data structure
+// and then join all of them together into the gallery.
+// If there are too many to fit into one grid, we can wrap it into a Pager
 var images = [
-  {"src": "http://placehold.it/390x390", "caption": "Foo", "title": "A Title"},
-  {"src": "http://placehold.it/390x390", "caption": "Bar"},
-  {"src": "http://placehold.it/390x390", "caption": "Baz"}];
-React.render(<Gallery images={images}/>, document.getElementById("gallery"));
+  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
+  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
+  {"original": "http://placehold.it/1000x600", "caption": "Baz"}];
+React.render(<ProjectGallery images={images}/>, document.getElementById("gallery"));
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 React.render(<NavLinks />, document.getElementById("nav-container"))
 
