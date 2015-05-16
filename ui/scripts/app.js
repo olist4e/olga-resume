@@ -27,7 +27,7 @@ var dataSkills = DATA_ROOT + "/skills";
 // and then join all of them together into the gallery.
 // If there are too many to fit into one grid, we can wrap it into a Pager
 var images = [
-  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
+  {"original": "http://placehold.it/1000x600", "thumbnail": "http://placehold.it/500x300", "caption": "Foo"},
   {"original": "http://placehold.it/1000x600", "caption": "Bar"},
   {"original": "http://placehold.it/1000x600", "caption": "Baz"},
   {"original": "http://placehold.it/1000x600", "caption": "Foo"},
