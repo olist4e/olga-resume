@@ -25,20 +25,22 @@ var Link = Router.Link;
 var dataSkills = DATA_ROOT + "/skills";
 // Note: Idea is that we add entries like these in images to the projects data structure
 // and then join all of them together into the gallery.
-// If there are too many to fit into one grid, we can wrap it into a Pager
+// If there are too many to fit into one grid, we can wrap it into a Pager //"thumbnail": "http://placehold.it/500x300", 
 var images = [
-  {"original": "http://placehold.it/1000x600", "thumbnail": "http://placehold.it/500x300", "caption": "Foo"},
-  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
-  {"original": "http://placehold.it/1000x600", "caption": "Baz"},
-  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
-  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
-  {"original": "http://placehold.it/1000x600", "caption": "Baz"},
-  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
-  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
-  {"original": "http://placehold.it/1000x600", "caption": "Baz"},
-  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
-  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
-  {"original": "http://placehold.it/1000x600", "caption": "Baz"}];
+  {"original": "/images/gallery/PerformanceTable.png", "caption": "Performance Table for a dressage competition"},
+
+  {"original": "/images/gallery/Results.png", "caption": "Investor Profile Quiz Results"},
+  {"original": "/images/gallery/InvestorProfile.png", "caption": "Investor Profile Selector"},
+
+  {"original": "/images/gallery/AffinityBoard.jpg", "caption": "Affinity Board for ubiquitous smart table design"},
+  {"original": "/images/gallery/PaperPrototype.JPG", "caption": "Paper prototype for ubiquitous smart table design"},
+  {"original": "/images/gallery/TechnicalProbe.jpg", "caption": "Technical Probe for ubiquitous smart table design"},
+
+  {"original": "/images/gallery/Dashboard.png", "caption": "Health Dashboard prototype"},
+
+  {"original": "/images/gallery/GuestCard.png", "caption": "Guest Card fly-out for Apartment Management iPad App"},
+
+  {"original": "/images/gallery/WiadTalk.jpg", "caption": "World Information Architecture Day, Ann Arbor, 2015"}];
 React.render(<ProjectGallery images={images}/>, document.getElementById("gallery"));
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 React.render(<NavLinks />, document.getElementById("nav-container"))

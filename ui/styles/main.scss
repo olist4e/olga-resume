@@ -1,8 +1,6 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/";
 
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "compass";
-@import "ImageGallery";
+
 
 
 /*** Screen size break downs ***/
@@ -18,6 +16,9 @@ $projects-per-row-desktop: 3;
 $projects-per-row-tablet: 2;
 $projects-per-row-phones: 1;
 $project-padding: 10px;
+
+
+
 
 
 @mixin respond-to($media){
@@ -47,6 +48,10 @@ $project-padding: 10px;
     }
 
 }
+
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "compass";
+@import "ImageGallery";
 
 
 /* Space out content a bit */

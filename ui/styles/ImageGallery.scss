@@ -2,6 +2,7 @@ $ig-screen-sm-min: 768px;
 $ig-white: #ffffff;
 $ig-black: #222222;
 $ig-blue: #337ab7;
+$ig-red:  #C11B17;
 
 .ImageGallery {
   user-select: none;
@@ -31,7 +32,7 @@ $ig-blue: #337ab7;
 
       &:hover {
         transform: scale(1.4);
-        color: $ig-blue;
+        color: $ig-red;
       }
     }
 
@@ -64,12 +65,18 @@ $ig-blue: #337ab7;
           position: absolute;
           bottom: 0px;
           padding-bottom: 1%;
-          background-color: rgba(0,0,0,0.3);
+          background-color: rgba(0,0,0,0.5);
           width: 100%;
         }
         .ImageGallery_content_slides_slide_caption_text {
+          @include respond-to(xxxs) { font-size:x-small }
+        @include respond-to(xxs) { font-size:x-small }
+        @include respond-to(xs) { font-size:small }
+        @include respond-to(sm) { font-size:small }
+
           color: white;
           padding-left: 1%;
+          padding-top: 1%;
         }
 
         &.left, &.center, &.right {
@@ -173,9 +180,9 @@ $ig-blue: #337ab7;
 
         &.active {
           img {
-            border: 4px solid $ig-blue;
+            border: 4px solid $ig-red;
             @media (max-width: $ig-screen-sm-min) {
-              border: 3px solid $ig-blue;
+              border: 3px solid $ig-red;
             }
           }
         }

@@ -49,12 +49,17 @@ var DetailedProject = React.createClass({
       return {background: 'url(' + URL + ') center center no-repeat' }
     };
 
-    var results;
+    var results, images;
 
     // this adds in result section if results exists in the JSON file
     if (this.state.project.results){
       results =  <div><span className="sub-header">4. RESULTS</span><p>{this.state.project.results}</p></div>;
         
+    }
+
+    console.log(this.state.project.images)
+    if (this.state.project.images){
+      images = <div class="project-thumbnails"><span className="sub-header">Project Images</span><ProjectThumbnails images={this.state.project.images} /></div>
     }
 
     var constructHeader = function(project){
@@ -74,9 +79,9 @@ var DetailedProject = React.createClass({
       return "#/project/" + (cid + 1);
     }
 
-    var images = [{"original": "http://placehold.it/200x200", "caption": "Foo"},
-        {"original": "http://placehold.it/200x200", "caption": "Bar"},
-        {"original": "http://placehold.it/200x200", "caption": "Baz"}];
+    // var images = [{"original": "http://placehold.it/200x200", "caption": "Foo"},
+    //     {"original": "http://placehold.it/200x200", "caption": "Bar"},
+    //     {"original": "http://placehold.it/200x200", "caption": "Baz"}];
 
     return (
        <div>
@@ -95,10 +100,7 @@ var DetailedProject = React.createClass({
 
              {results}
             
-            <div class="project-thumbnails">
-              <h3>Project Images</h3>
-              <ProjectThumbnails images={images} />
-            </div>
+            {images}
            
           </div>
           <Link href="/projects">Back to project list</Link>

@@ -8,7 +8,7 @@ with some customizations
 var React = require('react/addons');
 
 var backgroundInline = function(URL, height){
-  return { background: 'url(' + URL + ') no-repeat center center', width: "100%", height: height}
+  return { background: 'url(' + URL + ') no-repeat center center', width: "100%", "padding-top":"60%", "background-size":"contain"}
 }
 
 var Slide = React.createClass({

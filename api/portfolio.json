@@ -14,7 +14,7 @@
 		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ]
 	},
 	{
-		"_id" : 2, 
+		"_id" : 6, 
 		"results" : "", 
 		"solution" : "To support the task presented above, I chose to utilize a Parallel Coordinates visualization, a two-dimensional technique to visualize multidimensional data sets. The visualization was tied to a data table to allow a user to drill into the data in detail.\nThe parallel coordinates visualization allows a user to see the overall pattern in the data and identify outliers at a glance. Additionally, the visualization’s interactions allow the user to quickly narrow down the data presented based on a set of parameters. \n A data table at the bottom of the visualization duplicates the data represented in parallel coordinates. The purpose of the table is to show exact entries for a particular flow based on the search parameter or a filter.", 
 		"process" : "I started by learning needs of the network engineers and understanding the data used to solve the problem. Once the constraints of the project became clear, I did a thorough investigation of the different types of visualization that could support the data. There were multiple options, but I focused on two: parallel coordinates and cord diagram. I tested these options by developing quick prototypes using fake data. Based on this prototyping excercise, I selected parallel coordinates. After developing and testing the visualization, it became clear that it was both difficult to set precise boundaries using only direct interactions with the visualization and difficult to judge a value of a cord for a particular axis. Based on this finding, I added a data table that allowed a user to both dynamically filter the data and drill into the specific values being visualized.", 
@@ -53,10 +53,13 @@
 		"image" : "GDA.png", 
 		"banner" : "GDA-banner.png",
 		"position" : "UX Developer", 
-		"contributions" : [ "one", "two" ]
+		"contributions" : [ "one", "two" ],
+		"images":[{"original": "http://placehold.it/200x200", "caption": "Foo"},
+        {"original": "http://placehold.it/200x200", "caption": "Bar"},
+        {"original": "http://placehold.it/200x200", "caption": "Baz"}]
 	},
 	{
-		"_id" : 6, 
+		"_id" : 2, 
 		"results" : "The real time low latency data visualization is still used at the CMS control room to this day.", 
 		"solution" : "To help physicists speed up their decision-making process, I developed a real time low latency data visualization framework. The framework used a simple XML configuration file that described the display layout and data it showed.", 
 		"process" : "I developed a functioning prototype desktop application to test the performance of the displays in the control room environment. After a month-long trial period, we identified the need for the application to be visible within a browser to improve the user experience. Based on this user feedback, I made modifications to the framework, which were then deployed to the CMS control room.", 
