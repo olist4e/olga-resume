@@ -1,10 +1,10 @@
 [
 
 ["dev","5"],
-["ux", "4"],
+["ux", "5"],
 
 ["dev-javascript","5"],
-["dev-javascript-d3","3"],
+["dev-javascript-d3","4"],
 ["dev-javascript-jquery","4"],
 ["dev-javascript-react","0.5"],
 ["dev-javascript-bootstrap","3"],
@@ -21,12 +21,12 @@
 
 
 
-["ux-Design","4"],
-["ux-Design-Axure","2"],
-["ux-Design-Photoshop","2"],
-["ux-Design-Illustrator","2"],
+["ux-Design","5"],
+["ux-Design-Axure","3"],
+["ux-Design-Photoshop","3"],
+["ux-Design-Illustrator","3"],
 ["ux-Design-Prototyping","4"],
-["ux-Design-Storyboarding","2"],
+["ux-Design-Storyboarding","3"],
 
 ["ux-Research","2"],
 ["ux-Research-Usability testing","2"],
