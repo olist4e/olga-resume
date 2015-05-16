@@ -29,6 +29,15 @@ var dataSkills = DATA_ROOT + "/skills";
 var images = [
   {"original": "http://placehold.it/1000x600", "caption": "Foo"},
   {"original": "http://placehold.it/1000x600", "caption": "Bar"},
+  {"original": "http://placehold.it/1000x600", "caption": "Baz"},
+  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
+  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
+  {"original": "http://placehold.it/1000x600", "caption": "Baz"},
+  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
+  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
+  {"original": "http://placehold.it/1000x600", "caption": "Baz"},
+  {"original": "http://placehold.it/1000x600", "caption": "Foo"},
+  {"original": "http://placehold.it/1000x600", "caption": "Bar"},
   {"original": "http://placehold.it/1000x600", "caption": "Baz"}];
 React.render(<ProjectGallery images={images}/>, document.getElementById("gallery"));
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
