@@ -3,6 +3,7 @@ var Router = require('react-router-component');
 var Locations = Router.Locations;
 var Location = Router.Location;
 var Link = Router.Link;
+var ProjectThumbnails = require('./ProjectThumbnails.js');
 
 var DetailedProject = React.createClass({
   getInitialState:function(){ 
@@ -72,6 +73,11 @@ var DetailedProject = React.createClass({
       }
       return "#/project/" + (cid + 1);
     }
+
+    var images = [{"original": "http://placehold.it/200x200", "caption": "Foo"},
+        {"original": "http://placehold.it/200x200", "caption": "Bar"},
+        {"original": "http://placehold.it/200x200", "caption": "Baz"}];
+
     return (
        <div>
           <div className="project-content">
@@ -89,6 +95,10 @@ var DetailedProject = React.createClass({
 
              {results}
             
+            <div class="project-thumbnails">
+              <h3>Project Images</h3>
+              <ProjectThumbnails images={images} />
+            </div>
            
           </div>
           <Link href="/projects">Back to project list</Link>
