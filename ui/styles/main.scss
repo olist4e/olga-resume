@@ -10,6 +10,11 @@ $break-sm: 768px;
 $break-md: 992px;
 $break-lg:1200px;
 
+/*** Colors ***/
+$ig-main-red:  #CA3826;
+$ig-main-grey: #414141;
+$ig-main-light-grey: #979797;
+
 
 /** Project related variables */
 $projects-per-row-desktop: 3;
@@ -65,6 +70,16 @@ body {
     line-height: 20pt;
 }
 
+a{
+    color: $ig-main-grey;
+
+    &:hover{
+        text-decoration:none;
+        cursor: pointer;
+        color: inherit; 
+    }
+}
+
 .header,
 .footer {
     padding-left: 15px;
@@ -80,7 +95,7 @@ nav {
     background-color: white;
 
     /* Logo image */
-    div.logo{
+    .logo{
         @include respond-to(xxxs) { background:url("../images/Logo-smaller.png") no-repeat left center; }
         @include respond-to(xxs) { background:url("../images/Logo-smaller.png") no-repeat left center; height:50px; }
         @include respond-to(xs) { background:url("../images/Logo.png") no-repeat left center; }
@@ -103,17 +118,21 @@ ul.navigation-links{
     li{
         display: block;
         float: left;
-        @include respond-to(xxxs) { padding:5px; }
-        @include respond-to(xxs) { padding:5px; }
-        @include respond-to(xs) { padding:10px; }
-        @include respond-to(sm) { padding:15px; }
-        @include respond-to(md) { padding:15px; }
-        @include respond-to(lg) { padding:15px; }
-       
-    }
 
-   a{
-       &:hover{text-decoration:none;}
+        a{
+            @include respond-to(xxxs) { padding:5px; }
+            @include respond-to(xxs) { padding:5px; }
+            @include respond-to(xs) { padding:10px; }
+            @include respond-to(sm) { padding:15px; }
+            @include respond-to(md) { padding:15px; }
+            @include respond-to(lg) { padding:15px; }
+
+            &:hover{
+                color:white;
+                background-color:$ig-main-red;
+            }
+        }
+       
     }
 
     @include respond-to(xxxs) {  
