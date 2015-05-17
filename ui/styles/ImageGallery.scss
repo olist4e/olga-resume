@@ -13,6 +13,7 @@ $ig-red:  #CA3826;
 
   .ImageGallery_content {
     position: relative;
+
     .ImageGallery_content_left_nav,
     .ImageGallery_content_right_nav {
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -158,6 +159,7 @@ $ig-red:  #CA3826;
     overflow: hidden;
     background: $ig-white;
     padding-top: 10px;
+      
     .ImageGallery_thumbnail_container_thumbnails {
       cursor: pointer;
       text-align: center;

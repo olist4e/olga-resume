@@ -106,7 +106,15 @@
 		"eLink" : "www.ohworth.com",
 		"banner" : "Portfolio-banner.png",
 		"position" : "UX Developer", 
-		"contributions" : [ "one", "two" ]
+		"contributions" : [ "one", "two" ],
+		"images":
+			[
+			{"original": "/images/gallery/portfolio/MainDesignLarge.png", "thumbnail":"/images/gallery/portfolio/MainDesignSmall.png", "caption": "Portfolio Visual Exploration"},
+	        {"original": "/images/gallery/portfolio/WorkSkillsLarge.png","thumbnail":"/images/gallery/portfolio/WorkSkillsSmall.png", "caption": "Portfolio Visual Exploration"},
+			{"original": "/images/gallery/portfolio/DesignGuideLarge.png", "thumbnail":"/images/gallery/portfolio/DesignGuideSmall.png", "caption": "Portfolio Design Guide"},
+	        {"original": "/images/gallery/portfolio/BussinesCardLarge.png","thumbnail":"/images/gallery/portfolio/BussinesCardSmall.png", "caption": "Business Card Print"},
+			{"original": "/images/gallery/portfolio/CupLarge.png", "thumbnail":"/images/gallery/portfolio/CupLarge.png", "caption": "Cup Design Exploration"}
+	        ]
 	}
 	
 ]

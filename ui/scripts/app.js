@@ -27,22 +27,43 @@ var dataSkills = DATA_ROOT + "/skills";
 // and then join all of them together into the gallery.
 // If there are too many to fit into one grid, we can wrap it into a Pager //"thumbnail": "http://placehold.it/500x300", 
 var images = [
-  {"original": "/images/gallery/Results.png", "caption": "Investor Profile Quiz Results"},
-  {"original": "/images/gallery/InvestorProfile.png", "caption": "Investor Profile Selector"},
+  {"original": "/images/gallery/Results.png", "caption": "Investor Profile Quiz Results wireframe"},
+  {"original": "/images/gallery/InvestorProfile.png", "caption": "Investor Profile Selector wireframe"},
+  {"original": "/images/gallery/FundPage.png", "caption": "Fund Page wireframe for Investment Management site"},
+
+  {"original": "/images/gallery/Dashboard.png", "caption": "Health Dashboard prototype wire"},
+
+  {"original": "/images/gallery/GuestCard.png", "caption": "Guest Card fly-out wireframe for Apartment Management iPad App"},
+  {"original": "/images/gallery/Pricing.png", "caption": "Pricing page wireframe for Apartment Management iPad App"},
+  {"original": "/images/gallery/GuestCardLadnscape.png", "caption": "Appointment fly-out wireframe for Apartment Management iPad App"},
+
+  {"original": "/images/gallery/HelpForm.png", "caption": "Help Form wireframe for a Health Care Provider site"},
+  {"original": "/images/gallery/HealthCareDashboard.png", "caption": "Dashboard wireframe for a Health Care Provider site"},
+  {"original": "/images/gallery/FeedbackForm.png", "caption": "Feedback Form wireframe for a Health Care Provider site"},
+
+  {"original": "/images/gallery/PerformanceTable.png", "caption": "Performance Table for a dressage competition"},
+
+  {"original": "/images/gallery/portfolio/MainDesignLarge.png", "caption": "Performance Table for a dressage competition"},
+  {"original": "/images/gallery/portfolio/DesignGuideLarge.png", "thumbnail":"/images/gallery/portfolio/DesignGuideSmaller.png", "caption": "Portfolio Design Guide"},
+  {"original": "/images/gallery/portfolio/BussinesCardLarge.png","thumbnail":"/images/gallery/portfolio/BussinesCardSmaller.png", "caption": "Business Card Print"},
+
+  {"original": "/images/gallery/deepfield/GraphLarge.png", "thumbnail":"/images/gallery/deepfield/GraphSmaller.png", "caption": "Parallel Coordinates Graph"},
+  {"original": "/images/gallery/deepfield/DashboardLarge.png","thumbnail":"/images/gallery/deepfield/DashboardSmaller.png", "caption": "Deepfield navigation and dashboard"},
 
   {"original": "/images/gallery/AffinityBoard.jpg", "caption": "Affinity Board for ubiquitous smart table design"},
   {"original": "/images/gallery/PaperPrototype.JPG", "caption": "Paper prototype for ubiquitous smart table design"},
   {"original": "/images/gallery/TechnicalProbe.jpg", "caption": "Technical Probe for ubiquitous smart table design"},
 
-  {"original": "/images/gallery/Dashboard.png", "caption": "Health Dashboard prototype"},
-
-  {"original": "/images/gallery/GuestCard.png", "caption": "Guest Card fly-out for Apartment Management iPad App"},
-
   {"original": "/images/gallery/WiadTalk.jpg", "caption": "World Information Architecture Day, Ann Arbor, 2015"},
 
-  {"original": "/images/gallery/PerformanceTable.png", "caption": "Performance Table for a dressage competition"}
+  {"original": "/images/gallery/coachs-eye/CritiqueratorLarge.png", "thumbnail":"/images/gallery/coachs-eye/CritiqueratorSmaller.png", "caption": "Critiquerator feature for Coach’s Eye"},
+  {"original": "/images/gallery/coachs-eye/ExplorerLarge.png","thumbnail":"/images/gallery/coachs-eye/ExplorerSmaller.png", "caption": "Explorer for Coach's Eye"},
+  {"original": "/images/gallery/coachs-eye/OnboardingOneLarge.png", "thumbnail":"/images/gallery/coachs-eye/OnboardingOneSmaller.png", "caption": "On-boarding for Coach’s Eye"},
+  {"original": "/images/gallery/coachs-eye/OnboardingTwoLarge.png","thumbnail":"/images/gallery/coachs-eye/OnboardingTwoSmaller.png", "caption": "On-boarding for Coach’s Eye"},
+  {"original": "/images/gallery/coachs-eye/StorePopLarge.png", "thumbnail":"/images/gallery/coachs-eye/StorePopSmaller.png", "caption": "Store Popup for Coach’s Eye"}
+
   ];
-React.render(<ProjectGallery images={images}/>, document.getElementById("gallery"));
+React.render(<ProjectGallery images={images}/>, document.getElementById("gallery-content"));
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 React.render(<NavLinks />, document.getElementById("nav-container"))
 

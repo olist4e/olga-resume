@@ -123,7 +123,7 @@ ul.navigation-links{
             @include respond-to(xxxs) { padding:5px; }
             @include respond-to(xxs) { padding:5px; }
             @include respond-to(xs) { padding:10px; }
-            @include respond-to(sm) { padding:15px; }
+            @include respond-to(sm) { padding:10px; }
             @include respond-to(md) { padding:15px; }
             @include respond-to(lg) { padding:15px; }
 
@@ -280,6 +280,16 @@ div.project-content{
     }
 }
 
+div#gallery-content{
+    @include respond-to(xxxs) {  margin-left: 5%; margin-right: 5%;}
+    @include respond-to(xxs) { margin-left: 5%; margin-right: 5%;}
+    @include respond-to(xs) {  margin-left: 5%; margin-right: 5%;}
+    @include respond-to(sm) {  margin-left: 5%; margin-right: 5%; }
+    @include respond-to(md) {  margin-left: 10%; margin-right: 10%; }
+    @include respond-to(lg) {  margin-left: 15%; margin-right: 15%; }
+
+}
+
 /* Skill info  on the main page*/
 div#skills{
     overflow: auto;
@@ -374,13 +384,6 @@ div#contacts{
     }
 
 }
-
-/* Project Gallery on the main page */
-div#gallery {
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
 
 /* Footer */
 div.footer{

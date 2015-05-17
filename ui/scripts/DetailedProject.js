@@ -78,10 +78,6 @@ var DetailedProject = React.createClass({
       return "#/project/" + (cid + 1);
     }
 
-    // var images = [{"original": "http://placehold.it/200x200", "caption": "Foo"},
-    //     {"original": "http://placehold.it/200x200", "caption": "Bar"},
-    //     {"original": "http://placehold.it/200x200", "caption": "Baz"}];
-
     return (
        <div>
           <div className="project-content">
