@@ -27,8 +27,6 @@ var dataSkills = DATA_ROOT + "/skills";
 // and then join all of them together into the gallery.
 // If there are too many to fit into one grid, we can wrap it into a Pager //"thumbnail": "http://placehold.it/500x300", 
 var images = [
-  {"original": "/images/gallery/PerformanceTable.png", "caption": "Performance Table for a dressage competition"},
-
   {"original": "/images/gallery/Results.png", "caption": "Investor Profile Quiz Results"},
   {"original": "/images/gallery/InvestorProfile.png", "caption": "Investor Profile Selector"},
 
@@ -40,7 +38,10 @@ var images = [
 
   {"original": "/images/gallery/GuestCard.png", "caption": "Guest Card fly-out for Apartment Management iPad App"},
 
-  {"original": "/images/gallery/WiadTalk.jpg", "caption": "World Information Architecture Day, Ann Arbor, 2015"}];
+  {"original": "/images/gallery/WiadTalk.jpg", "caption": "World Information Architecture Day, Ann Arbor, 2015"},
+
+  {"original": "/images/gallery/PerformanceTable.png", "caption": "Performance Table for a dressage competition"}
+  ];
 React.render(<ProjectGallery images={images}/>, document.getElementById("gallery"));
 React.render(<SunChart source = {dataSkills}/>, document.getElementById("sunburst"));
 React.render(<NavLinks />, document.getElementById("nav-container"))

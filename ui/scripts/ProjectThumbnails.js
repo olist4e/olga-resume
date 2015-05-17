@@ -45,7 +45,8 @@ var ProjectThumbnails = React.createClass({
 					width: width, height: height,
 					display: "inline-block",
 					"background-size":"cover",
-					"margin":"2px"
+					"margin":"2px",
+					"cursor":"pointer"
 				};
 				object.title = object.caption;
 				return <ModalTrigger modal={<MyModal object={object} onRequestShow={onRequestShow}/> }>

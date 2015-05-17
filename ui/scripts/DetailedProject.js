@@ -57,7 +57,6 @@ var DetailedProject = React.createClass({
         
     }
 
-    console.log(this.state.project.images)
     if (this.state.project.images){
       images = <div class="project-thumbnails"><span className="sub-header">Project Images</span><ProjectThumbnails images={this.state.project.images} /></div>
     }

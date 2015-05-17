@@ -13,54 +13,8 @@
 		"position" : "User Experience Strategist", 
 		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ],
 		"images":
-			[{"original": "/images/gallery/enlighten/ChallengesSmall.png", "caption": "Challenges Page, mobile"},
-	        {"original": "/images/gallery/enlighten/DashboardSmall.png", "caption": "Challenges page, web"}]
-	},
-	{
-		"_id" : 6, 
-		"results" : "", 
-		"solution" : "To support the task presented above, I chose to utilize a Parallel Coordinates visualization, a two-dimensional technique to visualize multidimensional data sets. The visualization was tied to a data table to allow a user to drill into the data in detail.\nThe parallel coordinates visualization allows a user to see the overall pattern in the data and identify outliers at a glance. Additionally, the visualization’s interactions allow the user to quickly narrow down the data presented based on a set of parameters. \n A data table at the bottom of the visualization duplicates the data represented in parallel coordinates. The purpose of the table is to show exact entries for a particular flow based on the search parameter or a filter.", 
-		"process" : "I started by learning needs of the network engineers and understanding the data used to solve the problem. Once the constraints of the project became clear, I did a thorough investigation of the different types of visualization that could support the data. There were multiple options, but I focused on two: parallel coordinates and cord diagram. I tested these options by developing quick prototypes using fake data. Based on this prototyping excercise, I selected parallel coordinates. After developing and testing the visualization, it became clear that it was both difficult to set precise boundaries using only direct interactions with the visualization and difficult to judge a value of a cord for a particular axis. Based on this finding, I added a data table that allowed a user to both dynamically filter the data and drill into the specific values being visualized.", 
-		"challenge" : "Network Engineers need to reduce costs by efficiently utilizing network resources. Specified task include: 1) Identify the most expensive data flows, in terms of dollars per megabit of data transferred. 2) Minimize latency by minimizing the distance from the customers’ modems to the Points of Presence (PoPs), which are the physical locations where one network provider plugs into a router of a different network.", 
-		"description" : "", 
-		"employer" : "DeepField Networks", 
-		"eLink" : "www.deepfield.com",
-		"image" : "deep-field-diagram.png", 
-		"banner" : "deep-file-banner.jpg",
-		"position" : "User Experience Intern", 
-		"contributions" : [ "one", "two" ]
-	},
-	{
-		"_id" : 3, 
-		"results" : "The second version of Android app is currently at 500,000 - 1,000,000 installs and four star rating on Google play. The design was rated favorably by Google.", 
-		"solution" : "I completely redesigned the Android app’s interaction layer and updated the look and feel to align better with Android design patters. The result was an Android app that was intuitive and familiar to Android users, as confirmed in our follow-up user studies.", 
-		"process" : "I began by deep diving into the Android world to learn typical interaction patterns and visual styles. At the same time I conducted usability testing with Android users on the current version of the app to identify most common usability issues. Additionally I negotiated with the Coach’s Eye team to introduce changes to the brand and pricing model that would better address Android users. This includes using fly-in (hamburger) navigation style and switching to an in-app purchase model. Based on the initial usability testing findings, I designed a second version of the app that included improvements in interaction design; Android look and feel; and information architecture. The design process included multiple iteration cycles based on the business, development and user feedback.", 
-		"challenge" : "Coach’s Eye, a video-editing tool for trainers and athletes, was originally developed exclusively for iOS. However, later in the application lifecycle the decision was made to develop an Android version of the application. The first version of the Android app was an exact copy of the one on iOS, and did not gain the market share the business was hoping for. I was tasked with improving the UX of the second version of the Android app, with the goal of increasing the app’s market share.", 
-		"description" : "", 
-		"employer" : "TechSmith", 
-		"eLink" : "www.coachseye.com",
-		"image" : "TechSmith.png", 
-		"banner" : "TechSmith-banner.png",
-		"position" : "User Experience Intern", 
-		"contributions" : [ "one", "two" ]
-	},
-	{
-		"_id" : 4, 
-		"results" : "", 
-		"solution" : "To help riders and trainers with low statistical literacy understand complicated score analyses, I recommended a set of simple commonly accepted visualizations. These illustration included bar charts, heat maps, line plots, and data tables. To further assist the users, the visualizations were enhanced with context-based interactions such as hovering to see exact values for heat maps and multi-select filters for line plots. In order to upload custom score sheets I designed and developed a complex dynamic form that allowed a user to define a particular type of the score sheet that was uploaded.", 
-		"process" : "After gathering knowledge about dressage competition data, we selected a list of commonly accepted visualizations that would best address major users concerns, such identifying weak performance points and improving overall competition scores. These visualization were then presented to dressage riders and trainers on World Dressage Masters event in Wellington, Florida in 2011. Based on the resulting user feedback, the visualizations were simplified and remodeled to better fit riders’ mental model", 
-		"challenge" : "Global Dressage Analytics (GDA) is web-based start-up that helps dressage riders, trainers, and judges by providing tools that help riders analyze past performance, predict future performance, and identify training priorities. The main challenges of the application included: 1)Helping riders and trainers with low statistical literacy understand complicated score analyses 2)Allowing users to upload custom score sheets.", 
-		"description" : "", 
-		"employer" : "Global Dressage Analytics", 
-		"eLink" : "www.globaldressageanalytics.com/",
-		"image" : "GDA.png", 
-		"banner" : "GDA-banner.png",
-		"position" : "UX Developer", 
-		"contributions" : [ "one", "two" ],
-		"images":
-			[{"original": "/images/gallery/gda/ParticipationSmall.png", "caption": "Participation Summary"},
-	        {"original": "/images/gallery/gda/PerformanceSmall.png", "caption": "Performance Summary"},
-	        {"original": "/images/gallery/gda/TableSmall.png", "caption": "Performance Table"}]
+			[{"original": "/images/gallery/enlighten/ChallengesLarge.png", "thumbnail":"/images/gallery/enlighten/ChallengesSmall.png", "caption": "Challenges Page, mobile"},
+	        {"original": "/images/gallery/enlighten/DashboardLarge.png","thumbnail":"/images/gallery/enlighten/DashboardSmall.png", "caption": "Challenges page, web"}]
 	},
 	{
 		"_id" : 2, 
@@ -76,10 +30,72 @@
 		"position" : "Junior Software Engineer", 
 		"contributions" : [ "one", "two" ],
 		"images":
-			[{"original": "/images/gallery/cern/DisplaySmall.png", "caption": "Data Visualization Display"}]
+			[{"original": "/images/gallery/cern/DisplayLarge.png","thumbnail":"/images/gallery/cern/DisplaySmall.png", "caption": "Data Visualization Display"},
+			{"original":"/images/gallery/cern/LHCSummaryLarge.png","thumbnail":"/images/gallery/cern/LHCSummarySmall.png", "caption": "Luminosity SummaryDisplay"},
+			{"original": "/images/gallery/cern/LumiScanLarge.png","thumbnail":"/images/gallery/cern/LumiScanSmall.png", "caption": "Luminosity Display"}
+			]
+	},
+	{
+		"_id" : 3, 
+		"results" : "The second version of Android app is currently at 500,000 - 1,000,000 installs and four star rating on Google play. The design was rated favorably by Google.", 
+		"solution" : "I completely redesigned the Android app’s interaction layer and updated the look and feel to align better with Android design patters. The result was an Android app that was intuitive and familiar to Android users, as confirmed in our follow-up user studies.", 
+		"process" : "I began by deep diving into the Android world to learn typical interaction patterns and visual styles. At the same time I conducted usability testing with Android users on the current version of the app to identify most common usability issues. Additionally I negotiated with the Coach’s Eye team to introduce changes to the brand and pricing model that would better address Android users. This includes using fly-in (hamburger) navigation style and switching to an in-app purchase model. Based on the initial usability testing findings, I designed a second version of the app that included improvements in interaction design; Android look and feel; and information architecture. The design process included multiple iteration cycles based on the business, development and user feedback.", 
+		"challenge" : "Coach’s Eye, a video-editing tool for trainers and athletes, was originally developed exclusively for iOS. However, later in the application lifecycle the decision was made to develop an Android version of the application. The first version of the Android app was an exact copy of the one on iOS, and did not gain the market share the business was hoping for. I was tasked with improving the UX of the second version of the Android app, with the goal of increasing the app’s market share.", 
+		"description" : "", 
+		"employer" : "TechSmith", 
+		"eLink" : "www.coachseye.com",
+		"image" : "TechSmith.png", 
+		"banner" : "TechSmith-banner.png",
+		"position" : "User Experience Intern", 
+		"contributions" : [ "one", "two" ],
+		"images":
+			[
+			{"original": "/images/gallery/coachs-eye/CritiqueratorLarge.png", "thumbnail":"/images/gallery/coachs-eye/CritiqueratorSmall.png", "caption": "Critiquerator feature for Coach’s Eye"},
+	        {"original": "/images/gallery/coachs-eye/ExplorerLarge.png","thumbnail":"/images/gallery/coachs-eye/ExplorerSmall.png", "caption": "Explorer for Coach's Eye"},
+			{"original": "/images/gallery/coachs-eye/OnboardingOneLarge.png", "thumbnail":"/images/gallery/coachs-eye/OnboardingOneSmall.png", "caption": "On-boarding for Coach’s Eye"},
+	        {"original": "/images/gallery/coachs-eye/OnboardingTwoLarge.png","thumbnail":"/images/gallery/coachs-eye/OnboardingTwoSmall.png", "caption": "On-boarding for Coach’s Eye"},
+			{"original": "/images/gallery/coachs-eye/StorePopLarge.png", "thumbnail":"/images/gallery/coachs-eye/StorePopSmall.png", "caption": "Store Popup for Coach’s Eye"}
+	        ]
+	},
+	{
+		"_id" : 4, 
+		"results" : "", 
+		"solution" : "To help riders and trainers with low statistical literacy understand complicated score analyses, I recommended a set of simple commonly accepted visualizations. These illustration included bar charts, heat maps, line plots, and data tables. To further assist the users, the visualizations were enhanced with context-based interactions such as hovering to see exact values for heat maps and multi-select filters for line plots. In order to upload custom score sheets I designed and developed a complex dynamic form that allowed a user to define a particular type of the score sheet that was uploaded.", 
+		"process" : "After gathering knowledge about dressage competition data, we selected a list of commonly accepted visualizations that would best address major users concerns, such identifying weak performance points and improving overall competition scores. These visualization were then presented to dressage riders and trainers on World Dressage Masters event in Wellington, Florida in 2011. Based on the resulting user feedback, the visualizations were simplified and remodeled to better fit riders’ mental model", 
+		"challenge" : "Global Dressage Analytics (GDA) is web-based start-up that helps dressage riders, trainers, and judges by providing tools that help riders analyze past performance, predict future performance, and identify training priorities. The main challenges of the application included: 1)Helping riders and trainers with low statistical literacy understand complicated score analyses 2)Allowing users to upload custom score sheets.", 
+		"description" : "", 
+		"employer" : "Global Dressage Analytics", 
+		"eLink" : "www.globaldressageanalytics.com/",
+		"image" : "GDA.png", 
+		"banner" : "GDA-banner.png",
+		"position" : "UX Developer", 
+		"contributions" : [ "one", "two" ],
+		"images":
+			[{"original": "/images/gallery/gda/MainLarge.png", "thumbnail":"/images/gallery/gda/MainSmall.png", "caption": "Main Dashboard"},
+			{"original": "/images/gallery/gda/ParticipationLarge.png", "thumbnail":"/images/gallery/gda/ParticipationSmall.png", "caption": "Participation Summary"},
+	        {"original":  "/images/gallery/gda/PerformanceLarge.png", "thumbnail":"/images/gallery/gda/PerformanceSmall.png", "caption": "Performance Summary"},
+	        {"original":  "/images/gallery/gda/TableLarge.png", "thumbnail":"/images/gallery/gda/TableSmall.png", "caption": "Performance Table"}]
 	},
 	{
 		"_id" : 5, 
+		"results" : "", 
+		"solution" : "To support the task presented above, I chose to utilize a Parallel Coordinates visualization, a two-dimensional technique to visualize multidimensional data sets. The visualization was tied to a data table to allow a user to drill into the data in detail.\nThe parallel coordinates visualization allows a user to see the overall pattern in the data and identify outliers at a glance. Additionally, the visualization’s interactions allow the user to quickly narrow down the data presented based on a set of parameters. \n A data table at the bottom of the visualization duplicates the data represented in parallel coordinates. The purpose of the table is to show exact entries for a particular flow based on the search parameter or a filter.", 
+		"process" : "I started by learning needs of the network engineers and understanding the data used to solve the problem. Once the constraints of the project became clear, I did a thorough investigation of the different types of visualization that could support the data. There were multiple options, but I focused on two: parallel coordinates and cord diagram. I tested these options by developing quick prototypes using fake data. Based on this prototyping excercise, I selected parallel coordinates. After developing and testing the visualization, it became clear that it was both difficult to set precise boundaries using only direct interactions with the visualization and difficult to judge a value of a cord for a particular axis. Based on this finding, I added a data table that allowed a user to both dynamically filter the data and drill into the specific values being visualized.", 
+		"challenge" : "Network Engineers need to reduce costs by efficiently utilizing network resources. Specified task include: 1) Identify the most expensive data flows, in terms of dollars per megabit of data transferred. 2) Minimize latency by minimizing the distance from the customers’ modems to the Points of Presence (PoPs), which are the physical locations where one network provider plugs into a router of a different network.", 
+		"description" : "", 
+		"employer" : "DeepField Networks", 
+		"eLink" : "www.deepfield.com",
+		"image" : "deep-field-diagram.png", 
+		"banner" : "deep-file-banner.jpg",
+		"position" : "User Experience Intern", 
+		"contributions" : [ "one", "two" ],
+		"images":
+			[{"original": "/images/gallery/deepfield/GraphLarge.png", "thumbnail":"/images/gallery/deepfield/GraphSmall.png", "caption": "Parallel Coordinates Graph"},
+	        {"original": "/images/gallery/deepfield/DashboardLarge.png","thumbnail":"/images/gallery/deepfield/DashboardSmall.png", "caption": "Deepfield navigation and dashboard"}]
+	
+	},
+	{
+		"_id" : 6, 
 		"results" : "", 
 		"solution" : "I developed a single page web application that outlined six featured projects that most evenly represented my skill set. The portfolio also describes my ideal User Experience process to give the user a deeper understanding of my thinking and problem solving skills. Additionally, the site includes a list of professional skills and contact information.", 
 		"process" : "First, I identified a list of possible users, which included recruiters, clients and colleges. To narrow the focus of the project I selected colleagues as primary persona. This implied that a user has a deep understanding of User Experience practices, follows current trends in UX fields, and has above average technical skills. Logically I also assumed that on average a content consumer of the site has very limited time resources and is interested in making a quick and accurate decision about my skill level. Based on the assumptions outlined above and thorough comparative analysis I have designed information architecture that best met the goals of my target user group. In parallel I developed a content strategy that suited portfolio organization. To verify my design decisions I performed a set moderated and unmoderated user test with my colleges that fit primary persona. The portfolio design was adjusted based on the feedback gathered.", 

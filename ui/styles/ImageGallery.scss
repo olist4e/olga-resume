@@ -2,7 +2,7 @@ $ig-screen-sm-min: 768px;
 $ig-white: #ffffff;
 $ig-black: #222222;
 $ig-blue: #337ab7;
-$ig-red:  #C11B17;
+$ig-red:  #CA3826;
 
 .ImageGallery {
   user-select: none;
@@ -22,7 +22,7 @@ $ig-red:  #C11B17;
       line-height: 0;
       z-index: 1;
       font-size: 6em;
-      text-shadow: 0 2px 2px $ig-black;
+      text-shadow: 0 1px 1px $ig-black;
       transition: all .2s ease-out;
       color: $ig-white;
 
@@ -32,6 +32,7 @@ $ig-red:  #C11B17;
 
       &:hover {
         transform: scale(1.4);
+        text-shadow: none;
         color: $ig-red;
       }
     }
