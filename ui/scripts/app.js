@@ -87,6 +87,13 @@ var App = React.createClass({
   }
 });
 
+$('.logo').on('click', function() {
+  $('html,body').animate({
+      scrollTop: $("#projects").offset().top-80
+    }, 1000);
+});
+
+
 React.render(<App />, projectsMount);
 
 
