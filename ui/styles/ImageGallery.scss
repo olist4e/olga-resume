@@ -1,6 +1,7 @@
 $ig-screen-sm-min: 768px;
 $ig-white: #ffffff;
 $ig-black: #222222;
+$ig-grey: #979797;
 $ig-blue: #337ab7;
 $ig-red:  #CA3826;
 
@@ -25,7 +26,8 @@ $ig-red:  #CA3826;
       font-size: 6em;
       text-shadow: 0 1px 1px $ig-black;
       transition: all .2s ease-out;
-      color: $ig-white;
+      color: $ig-grey;
+      opacity: 0.5;
 
       @media (max-width: $ig-screen-sm-min) {
         font-size: 4em;
@@ -35,6 +37,7 @@ $ig-red:  #CA3826;
         transform: scale(1.4);
         text-shadow: none;
         color: $ig-red;
+        opacity: 1.0;
       }
     }
 
@@ -67,7 +70,7 @@ $ig-red:  #CA3826;
           position: absolute;
           bottom: 0px;
           padding-bottom: 1%;
-          background-color: rgba(0,0,0,0.5);
+          background-color: rgba(0,0,0,0.7);
           width: 100%;
         }
         .ImageGallery_content_slides_slide_caption_text {
