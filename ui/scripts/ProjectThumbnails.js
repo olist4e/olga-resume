@@ -26,7 +26,8 @@ var ProjectThumbnails = React.createClass({
 	getDefaultProps: function() {
 		return {
 			height: "200px",
-			width: "200px"
+			width: "200px",
+			"background-size":"cover"
 		}
 	},
 	onRequestShow: function() {
@@ -42,12 +43,13 @@ var ProjectThumbnails = React.createClass({
 				var style = {
 					backgroundImage: "url(" + (object.thumbnail || object.original) + ")",
 					width: width, height: height,
-					display: "inline-block"
+					display: "inline-block",
+					"background-size":"cover",
+					"margin":"2px"
 				};
-				console.log("Style", style);
-				console.log("object", object);
+				object.title = object.caption;
 				return <ModalTrigger modal={<MyModal object={object} onRequestShow={onRequestShow}/> }>
-			    <div style={style} src={object.src} key={i}>{object.caption}</div>
+			    <div style={style} src={object.src} key={i}></div>
 			  </ModalTrigger>;
 		        
 		    })}

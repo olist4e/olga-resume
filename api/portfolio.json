@@ -11,7 +11,10 @@
 		"image" : "Enlighten.png",
 		"banner" : "Enlighten-banner.png", 
 		"position" : "User Experience Strategist", 
-		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ]
+		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ],
+		"images":
+			[{"original": "/images/gallery/enlighten/ChallengesSmall.png", "caption": "Challenges Page, mobile"},
+	        {"original": "/images/gallery/enlighten/DashboardSmall.png", "caption": "Challenges page, web"}]
 	},
 	{
 		"_id" : 6, 
@@ -54,9 +57,10 @@
 		"banner" : "GDA-banner.png",
 		"position" : "UX Developer", 
 		"contributions" : [ "one", "two" ],
-		"images":[{"original": "http://placehold.it/200x200", "caption": "Foo"},
-        {"original": "http://placehold.it/200x200", "caption": "Bar"},
-        {"original": "http://placehold.it/200x200", "caption": "Baz"}]
+		"images":
+			[{"original": "/images/gallery/gda/ParticipationSmall.png", "caption": "Participation Summary"},
+	        {"original": "/images/gallery/gda/PerformanceSmall.png", "caption": "Performance Summary"},
+	        {"original": "/images/gallery/gda/TableSmall.png", "caption": "Performance Table"}]
 	},
 	{
 		"_id" : 2, 
@@ -70,7 +74,9 @@
 		"image" : "CMS.png", 
 		"banner" : "CMS-banner.png",
 		"position" : "Junior Software Engineer", 
-		"contributions" : [ "one", "two" ]
+		"contributions" : [ "one", "two" ],
+		"images":
+			[{"original": "/images/gallery/cern/DisplaySmall.png", "caption": "Data Visualization Display"}]
 	},
 	{
 		"_id" : 5, 
