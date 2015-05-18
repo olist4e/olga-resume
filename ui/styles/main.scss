@@ -171,6 +171,15 @@ a:hover{ text-decoration:none; }
 
 div.section{
     padding-top:50px;
+
+    &#gallery, &#skills, &#contacts{
+        padding-top:10px;
+        border-top: 1px solid $ig-main-red;
+    }
+
+    &#gallery, &#skills{
+        padding-bottom:10px;
+    }
 }
 
 div.project-list { 
@@ -239,8 +248,22 @@ div#projects{
         @include respond-to(xxs) { height:60px; font-size: 14pt; }
         @include respond-to(xs) { height:60px; font-size: 14pt;}
 
-        a{
+        div.project-name {
+            display: inline;
+
+        }
+
+        div.project-position {
+            display: inline-block;
+            font-size: 11pt;
+            margin-left: 10px;
+        }
+
+        a {
             @include respond-to(xxxs) { display:block; float:left;}
+            div {
+                display: inline;
+            }
         }
     }
 
@@ -388,6 +411,14 @@ div.footer{
     font-size: 10pt;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Privacy Statement */
+div.privacy {
+    padding-bottom:10px;
+    padding-top:0;
+    font-size:10pt;
+    font-style:italic;
 }
 
 /* General tweaks */

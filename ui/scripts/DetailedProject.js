@@ -62,7 +62,7 @@ var DetailedProject = React.createClass({
     }
 
     var constructHeader = function(project){
-      return project.position + ", " + project.employer;
+      return <div><div className={"project-name"}>{project.name}</div><div className="project-position">{project.position + ", " + project.employer}</div></div>;
     }
 
     var constructLink = function(url){
@@ -72,7 +72,7 @@ var DetailedProject = React.createClass({
     var calculateProjectUrl = function(cid){
       // console.log(cid);
       cid = parseInt(cid);
-      if (cid == 6){
+      if (cid == 9) {
         return "#/project/1"
       }
       return "#/project/" + (cid + 1);

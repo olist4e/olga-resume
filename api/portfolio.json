@@ -3,13 +3,13 @@
 		"_id" : 1,
 		"name": "mHealth",
 		"results" : "", 
-		"solution" : "mHealth dashboard is a health goal recommendation system that helps a user to set achievable goals and maintain motivation. It acts as an aggregator system that accepts user health data from a range of wearable devices. Based on these data and personalized user preferences, mHealth recommends realistic and safe health goals. It also allows the user to set up friendly and healthy small group fitness challenges with the hope of providing additional incentive to achieve the user’s fitness and dietary goals. ", 
-		"process" : "Based on provided user research and in-depth comparative analysis, we designed a “healthy challenges” flow that allowed the user to set up a small group challenge within an independent, mobile-optimized card module. The design underwent multiple iterations based on the business, user and engineering feedback.After an in-depth user study of our initial design, we discovered that the original card-based approach did not clearly communicate to the user the typical flow of challenge creation. The multi-step challenge setup process became too fractured and hard to follow when limited by the card metaphor. In response to this finding, the design was reworked into a mobile- optimized web form. The new solution allowed the user to access all steps of the challenge creation in one place instead of breaking it into separate steps", 
-		"challenge" : "New wearable technology such as Jawbone and FitBit wristbands provide a unique opportunity to improve users’ health through gathering personal data. However, a large portion of users lack basic knowledge required to set realistic health goals and maintain motivation for prolonged time periods.", 
+		"solution" : "mHealth dashboard is a health goal recommendation system that helps a user to set achievable goals and maintain motivation. It acts as an aggregator system that accepts user health data from a wide range of wearable devices. Based on these data and personalized user preferences, mHealth recommends realistic and safe health goals. It also allows the user to set up friendly and healthy small group fitness challenges with the hope of providing additional incentive to achieve the user’s fitness and dietary goals. ", 
+		"process" : "Based on provided user research and in-depth comparative analyses, we designed a “healthy challenges” flow that allowed the user to set up a small group challenge within an independent, mobile-optimized card module. The design underwent multiple iterations based on the business, user, and engineering feedback. After an in-depth user study of our initial design, we discovered that the original card-based approach did not clearly communicate to the user the typical flow of challenge creation. The multi-step challenge setup process became too fractured and hard to follow when limited by the card metaphor. In response to this finding, the design was reworked into a mobile-optimized web form. The new solution allowed the user to access all steps of the challenge creation in one place instead of breaking it into separate steps", 
+		"challenge" : "New wearable technology such as Jawbone and FitBit wristbands provide a unique opportunity to improve users’ health by gathering fitness data. However, a large portion of users lack the basic knowledge required to set realistic health goals and maintain motivation for prolonged time periods.", 
 		"description" : "", 
 		"employer" : "Enlighten", 
 		"eLink" : "www.enlighten.com/",
-		"image" : "Enlighten.png",
+		"image" : "mHealth-tile.jpg",
 		"banner" : "Enlighten-banner.png", 
 		"position" : "UX Strategist", 
 		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ],
@@ -27,11 +27,15 @@
 		"description" : "", 
 		"employer" : "Enlighten", 
 		"eLink" : "www.enlighten.com/",
-		"image" : "Enlighten.png",
-		"banner" : "Enlighten-banner.png", 
+		"image" : "HealthCropped-tile.jpg",
+		"banner" : "Health-banner.jpg", 
 		"position" : "UX Strategist", 
 		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ],
-		"images":[]
+		"images":[
+			{"original": "/images/gallery/HealthCareDashboard.png","thumbnail":"/images/gallery/enlighten/HealthCareDashboardSmall.png", "caption": "Dashboard wireframe"},
+			{"original": "/images/gallery/enlighten/RegistrationWebLarge.png","thumbnail":"/images/gallery/enlighten/RegistrationWebSmall.png", "caption": "Registration page wireframe, web"},
+			{"original": "/images/gallery/enlighten/RegistrationMobileLarge.png","thumbnail":"/images/gallery/enlighten/RegistrationMobileSmall.png", "caption": "Registration page wireframe, mobile"}
+			]
 	},
 	{
 		"_id" : 3,
@@ -43,15 +47,18 @@
 		"description" : "", 
 		"employer" : "Enlighten", 
 		"eLink" : "www.enlighten.com/",
-		"image" : "Enlighten.png",
-		"banner" : "Enlighten-banner.png", 
+		"image" : "Apartments1-tile.jpg",
+		"banner" : "Apartments-banner.jpg", 
 		"position" : "UX Strategist", 
 		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ],
-		"images" : []
+		"images" : [
+			{"original": "/images/gallery/GuestCard.png","thumbnail":"/images/gallery/enlighten/GuestCardSmall.png", "caption": "Guest Information fly-out wireframe"},
+			{"original": "/images/gallery/Pricing.png","thumbnail":"/images/gallery/enlighten/PricingSmall.png", "caption": "Pricing page (based on my wireframe)"},
+			{"original": "/images/gallery/enlighten/GuestCardsLarge.png","thumbnail":"/images/gallery/enlighten/GuestCardsSmall.png", "caption": "Guest Card list (based on my wireframe)"}]
 	},
 	{
 		"_id" : 4,
-		"name": "International Investment Company Website*",
+		"name": "Investment Company Website*",
 		"results" : "",
 		"solution" : "The websites were designed as a flexible and modular template that is cable of adjusting to accommodate country-specific needs regarding content and compliance rules. The design included multiple variations of the  sections based on the content available in the specific country. The template also worked with a wide spectrum of European and Asian languages.", 
 		"process" : "A set of discovery interviews was conducted to get a better understanding of differences and similarities across countries. A comparative analysis was performed to gather a spectrum of possible solutions for the design challenge. In addition, I did an in-depth review of established brand and web standards to ensure that international sites seamlessly fit into the existing ecosystem.", 
@@ -59,11 +66,15 @@
 		"description" : "", 
 		"employer" : "Enlighten", 
 		"eLink" : "www.enlighten.com/",
-		"image" : "Enlighten.png",
-		"banner" : "Enlighten-banner.png", 
+		"image" : "Banking-tile.png",
+		"banner" : "Banking-banner.jpg", 
 		"position" : "UX Strategist", 
 		"contributions" : [ "Designing and wireframing web application as well as produced functional specification documents", "Supporting engineering and quality assurance team", "Conducting usability testing to validate design solutions" ],
-		"images": []
+		"images": [
+			{"original": "/images/gallery/FundPage.png","thumbnail":"/images/gallery/enlighten/FundPageSmall.png", "caption": "Fund page wireframe"},
+			{"original": "/images/gallery/enlighten/FundLitLarge.png","thumbnail":"/images/gallery/enlighten/FundLitSmall.png", "caption": "Fund Literature page wireframe"},
+			{"original": "/images/gallery/enlighten/InsightsLarge.png","thumbnail":"/images/gallery/enlighten/InsightsSmall.png", "caption": "Insights page wireframe"}
+		]
 	},
 	{
 		"_id" : 5,

@@ -35,7 +35,6 @@ var images = [
 
   {"original": "/images/gallery/GuestCard.png", "caption": "Guest card fly-out wireframe for apartment management iPad app"},
   {"original": "/images/gallery/Pricing.png", "caption": "Apartment pricing page for iPad app (based on my wireframe)"},
-  {"original": "/images/gallery/GuestCardLadnscape.png", "caption": "Appointment fly-out wireframe for apartment management iPad app"},
 
   {"original": "/images/gallery/HelpForm.png", "caption": "Help form wireframe for a health care provider site"},
   {"original": "/images/gallery/HealthCareDashboard.png", "caption": "Dashboard wireframe for a health care provider site"},
