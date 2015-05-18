@@ -27,30 +27,30 @@ var dataSkills = DATA_ROOT + "/skills";
 // and then join all of them together into the gallery.
 // If there are too many to fit into one grid, we can wrap it into a Pager //"thumbnail": "http://placehold.it/500x300", 
 var images = [
-  {"original": "/images/gallery/Results.png", "caption": "Investor Profile Quiz Results wireframe"},
-  {"original": "/images/gallery/InvestorProfile.png", "caption": "Investor Profile Selector wireframe"},
-  {"original": "/images/gallery/FundPage.png", "caption": "Fund Page wireframe for Investment Management site"},
+  {"original": "/images/gallery/Results.png", "caption": "Investor profile quiz results wireframe"},
+  {"original": "/images/gallery/InvestorProfile.png", "caption": "Investor profile selector wireframe"},
+  {"original": "/images/gallery/FundPage.png", "caption": "Fund page wireframe for investment management site"},
 
-  {"original": "/images/gallery/Dashboard.png", "caption": "Health Dashboard prototype wire"},
+  {"original": "/images/gallery/Dashboard.png", "caption": "Health dashboard prototype wireframe"},
 
-  {"original": "/images/gallery/GuestCard.png", "caption": "Guest Card fly-out wireframe for Apartment Management iPad App"},
-  {"original": "/images/gallery/Pricing.png", "caption": "Pricing page wireframe for Apartment Management iPad App"},
-  {"original": "/images/gallery/GuestCardLadnscape.png", "caption": "Appointment fly-out wireframe for Apartment Management iPad App"},
+  {"original": "/images/gallery/GuestCard.png", "caption": "Guest card fly-out wireframe for apartment management iPad app"},
+  {"original": "/images/gallery/Pricing.png", "caption": "Apartment pricing page for iPad app (based on my wireframe)"},
+  {"original": "/images/gallery/GuestCardLadnscape.png", "caption": "Appointment fly-out wireframe for apartment management iPad app"},
 
-  {"original": "/images/gallery/HelpForm.png", "caption": "Help Form wireframe for a Health Care Provider site"},
-  {"original": "/images/gallery/HealthCareDashboard.png", "caption": "Dashboard wireframe for a Health Care Provider site"},
-  {"original": "/images/gallery/FeedbackForm.png", "caption": "Feedback Form wireframe for a Health Care Provider site"},
+  {"original": "/images/gallery/HelpForm.png", "caption": "Help form wireframe for a health care provider site"},
+  {"original": "/images/gallery/HealthCareDashboard.png", "caption": "Dashboard wireframe for a health care provider site"},
+  {"original": "/images/gallery/FeedbackForm.png", "caption": "Feedback form wireframe for a health care provider site"},
 
-  {"original": "/images/gallery/PerformanceTable.png", "caption": "Performance Table for a dressage competition"},
+  {"original": "/images/gallery/PerformanceTable.png", "caption": "Performance table for a dressage competition"},
 
-  {"original": "/images/gallery/portfolio/MainDesignLarge.png", "caption": "Performance Table for a dressage competition"},
-  {"original": "/images/gallery/portfolio/DesignGuideLarge.png", "thumbnail":"/images/gallery/portfolio/DesignGuideSmaller.png", "caption": "Portfolio Design Guide"},
-  {"original": "/images/gallery/portfolio/BussinesCardLarge.png","thumbnail":"/images/gallery/portfolio/BussinesCardSmaller.png", "caption": "Business Card Print"},
+  {"original": "/images/gallery/portfolio/MainDesignLarge.png", "caption": "Portfolio visual design initial prototype"},
+  {"original": "/images/gallery/portfolio/DesignGuideLarge.png", "thumbnail":"/images/gallery/portfolio/DesignGuideSmaller.png", "caption": "Portfolio design guide"},
+  {"original": "/images/gallery/portfolio/BussinesCardLarge.png","thumbnail":"/images/gallery/portfolio/BussinesCardSmaller.png", "caption": "Business card (print)"},
 
-  {"original": "/images/gallery/deepfield/GraphLarge.png", "thumbnail":"/images/gallery/deepfield/GraphSmaller.png", "caption": "Parallel Coordinates Graph"},
+  {"original": "/images/gallery/deepfield/GraphLarge.png", "thumbnail":"/images/gallery/deepfield/GraphSmaller.png", "caption": "Parallel coordinates graph for network traffic"},
   {"original": "/images/gallery/deepfield/DashboardLarge.png","thumbnail":"/images/gallery/deepfield/DashboardSmaller.png", "caption": "Deepfield navigation and dashboard"},
 
-  {"original": "/images/gallery/AffinityBoard.jpg", "caption": "Affinity Board for ubiquitous smart table design"},
+  {"original": "/images/gallery/AffinityBoard.jpg", "caption": "Affinity board for ubiquitous smart table design"},
   {"original": "/images/gallery/PaperPrototype.JPG", "caption": "Paper prototype for ubiquitous smart table design"},
   {"original": "/images/gallery/TechnicalProbe.jpg", "caption": "Technical Probe for ubiquitous smart table design"},
 
@@ -60,7 +60,7 @@ var images = [
   {"original": "/images/gallery/coachs-eye/ExplorerLarge.png","thumbnail":"/images/gallery/coachs-eye/ExplorerSmaller.png", "caption": "Explorer for Coach's Eye"},
   {"original": "/images/gallery/coachs-eye/OnboardingOneLarge.png", "thumbnail":"/images/gallery/coachs-eye/OnboardingOneSmaller.png", "caption": "On-boarding for Coach’s Eye"},
   {"original": "/images/gallery/coachs-eye/OnboardingTwoLarge.png","thumbnail":"/images/gallery/coachs-eye/OnboardingTwoSmaller.png", "caption": "On-boarding for Coach’s Eye"},
-  {"original": "/images/gallery/coachs-eye/StorePopLarge.png", "thumbnail":"/images/gallery/coachs-eye/StorePopSmaller.png", "caption": "Store Popup for Coach’s Eye"}
+  {"original": "/images/gallery/coachs-eye/StorePopLarge.png", "thumbnail":"/images/gallery/coachs-eye/StorePopSmaller.png", "caption": "Store popup for Coach’s Eye"}
 
   ];
 React.render(<ProjectGallery images={images}/>, document.getElementById("gallery-content"));
