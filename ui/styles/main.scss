@@ -196,10 +196,21 @@ div.project{
             background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1));
             opacity: .8; 
           }
-
-        span.position{
+        span.name {
             position:absolute;
             bottom:24px;
+            margin:10px;
+            color:white;
+            @include respond-to(xxxs) {  font-size: 10pt; }
+            @include respond-to(xxs) {  font-size: 12pt; }
+            @include respond-to(xs) {  font-size: 14pt;  }
+            @include respond-to(sm) {  font-size: 14pt; }
+            @include respond-to(md) {  font-size: 14pt; }
+            @include respond-to(lg) {  font-size: 14pt; }
+        }
+        span.position{
+            position:absolute;
+            bottom:0px;
             margin:10px;
             color:white;
             @include respond-to(xxxs) {  font-size: 10pt; }
@@ -208,19 +219,6 @@ div.project{
             @include respond-to(sm) { font-size: 12pt; }
             @include respond-to(md) { font-size: 12pt;; }
             @include respond-to(lg) { font-size: 12pt; }
-        }
-
-        span.employer{
-            @include respond-to(xxxs) {  font-size: 10pt; }
-            @include respond-to(xxs) {  font-size: 12pt; }
-            @include respond-to(xs) {  font-size: 14pt;  }
-            @include respond-to(sm) {  font-size: 14pt; }
-            @include respond-to(md) {  font-size: 14pt; }
-            @include respond-to(lg) {  font-size: 14pt; }
-            position:absolute;
-            bottom:0;
-            margin:10px;
-            color:white;
         }
     }
 

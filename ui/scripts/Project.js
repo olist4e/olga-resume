@@ -24,8 +24,8 @@ var Project = React.createClass({
         <div className={projectClassString(this.props.project._id)} >
           <Link href= {produceLink(this.props.project._id)}>
             <div className={imageClassString}  style={backgroundInline(this.props.project.image)}>
-              <span className="position">{this.props.project.position}</span>
-              <span className="employer">{this.props.project.employer}</span>
+              <span className="name">{this.props.project.name}</span>
+              <span className="position">{this.props.project.position}, {this.props.project.employer}</span>
             </div>
             </Link>
         </div>
